@@ -1,0 +1,74 @@
+version: "3.1"
+
+stories:
+
+- story: greet_path
+  steps:
+  - action: action_listen
+  - intent: greet
+  - action: action_hello_json
+
+- story: goodby_path
+  steps:
+  - action: action_listen
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: bot_path
+  steps:
+  - action: action_listen
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: operational_prog_path
+  steps:
+  - action: action_listen
+  - intent: operational_time
+  - action: action_hours
+
+
+- story: business_prices_path
+  steps:
+  - action: action_listen
+  - intent: business_prices
+  - action: action_rates
+
+- story: business_services_path
+  steps:
+  - action: action_listen
+  - intent: business_services
+  - action: action_services
+
+- story: nature_interaction_path_yes
+  steps:
+  - action: action_listen
+  - intent: nature_interaction
+  - action: utter_nature_interaction
+  - action: action_listen
+  - intent: affirm
+  - action: action_redirect_to_human
+
+- story: nature_interaction_path_no
+  steps:
+  - action: action_listen
+  - intent: nature_interaction
+  - action: utter_nature_interaction
+  - action: action_listen
+  - intent: deny
+  - action: utter_deny
+
+- story: nature_interaction_path_yes
+  steps:
+  - action: action_listen
+  - intent: nature_interaction
+  - action: utter_nature_interaction
+
+- story: affirm_path
+  steps:
+  - action: action_listen
+  - intent: affirm
+
+- story: deny_path
+  steps:
+  - action: action_listen
+  - intent: deny

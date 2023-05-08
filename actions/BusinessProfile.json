@@ -1,0 +1,44 @@
+{
+  "business_name": "Chic Cuts Salon",
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "state": "CA",
+    "zip": "12345"
+  },
+  "phone": "555-555-5555",
+  "email": "info@chiccuts.com",
+  "website": "https://www.chiccuts.com",
+  "hours": {
+    "monday": "9am-5pm",
+    "tuesday": "9am-5pm",
+    "wednesday": "9am-5pm",
+    "thursday": "9am-7pm",
+    "friday": "9am-7pm",
+    "saturday": "9am-5pm",
+    "sunday": "closed"
+  },
+  "services": [
+    {
+      "name": "Haircut",
+      "description": "Our experienced stylists will help you find the perfect haircut to fit your style and needs.",
+      "price": "$50"
+    },
+    {
+      "name": "Coloring",
+      "description": "Transform your look with our professional coloring services. We use only the highest quality products to give you the best results.",
+      "price": "$80"
+    },
+    {
+      "name": "Styling",
+      "description": "Need a blowout or an updo for a special occasion? Our stylists will make you look and feel amazing.",
+      "price": "$60"
+    },
+    {
+      "name": "Extensions",
+      "description": "Add length and volume to your hair with our high-quality extensions.",
+      "price": "$200"
+    }
+  ],
+  "about": "At Chic Cuts Salon, we believe that everyone deserves to look and feel their best. That's why we offer a wide range of hair services to help you achieve your desired look. Our experienced stylists use only the highest quality products to give you the best results. Come visit us today and let us help you achieve the perfect hairstyle!"
+}

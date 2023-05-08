@@ -1,0 +1,48 @@
+version: '3.1'
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- business_services
+- business_prices
+- operational_time
+- nature_interaction
+responses:
+  utter_greet:
+  - text: Hello, I'm [Business Name] Chatbot, and I'm here to help you with your inquiries.
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: Yes, I'm [Business Name] Chatbot, and I'm here to help you with your inquiries.
+  utter_business_services:
+  - text: The services offered are x
+  utter_business_prices:
+    - text: The prices are x
+  utter_operational_time:
+  - text: The hours of operation are xx
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_nature_interaction:
+    - text: Hey, do you want to involve human interaction ?
+  utter_deny:
+    - text: I am eager to find out your curiosities!
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_greet
+- utter_goodbye
+- utter_iamabot
+- utter_business_services
+- utter_operational_time
+- utter_business_prices
+- utter_please_rephrase
+- action_hello
+- action_hello_json
+- action_hours
+- action_rates
+- action_services
+- utter_nature_interaction
+- action_redirect_to_human
