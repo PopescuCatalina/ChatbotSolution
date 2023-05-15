@@ -26,6 +26,11 @@ stories:
   - intent: operational_time
   - action: action_hours
 
+- story: services_period_path
+  steps:
+  - action: action_listen
+  - intent: services_period
+  - action: action_duration
 
 - story: business_prices_path
   steps:

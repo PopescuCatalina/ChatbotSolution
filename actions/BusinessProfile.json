@@ -1,44 +1,275 @@
 {
-  "business_name": "Chic Cuts Salon",
-  "address": {
-    "street": "123 Main St",
-    "city": "Anytown",
-    "state": "CA",
-    "zip": "12345"
-  },
-  "phone": "555-555-5555",
-  "email": "info@chiccuts.com",
-  "website": "https://www.chiccuts.com",
-  "hours": {
-    "monday": "9am-5pm",
-    "tuesday": "9am-5pm",
-    "wednesday": "9am-5pm",
-    "thursday": "9am-7pm",
-    "friday": "9am-7pm",
-    "saturday": "9am-5pm",
-    "sunday": "closed"
-  },
-  "services": [
-    {
-      "name": "Haircut",
-      "description": "Our experienced stylists will help you find the perfect haircut to fit your style and needs.",
-      "price": "$50"
+  "data": {
+    "workingHours": {
+      "monday": {
+        "start": "2023-05-08T08:00:00.257Z",
+        "end": "2023-05-08T17:00:00.257Z",
+        "isClosed": false
+      },
+      "tuesday": {
+        "start": "2023-05-09T08:00:00.257Z",
+        "end": "2023-05-09T17:00:00.257Z",
+        "isClosed": false
+      },
+      "wednesday": {
+        "start": "2023-05-10T08:00:00.257Z",
+        "end": "2023-05-10T17:00:00.257Z",
+        "isClosed": false
+      },
+      "thursday": {
+        "start": "2023-05-11T08:00:00.257Z",
+        "end": "2023-05-11T17:00:00.257Z",
+        "isClosed": false
+      },
+      "friday": {
+        "start": "2023-05-12T08:00:00.257Z",
+        "end": "2023-05-12T17:00:00.257Z",
+        "isClosed": false
+      },
+      "saturday": {
+        "start": "2023-05-13T08:00:00.257Z",
+        "end": "2023-05-13T17:00:00.257Z",
+        "isClosed": true
+      },
+      "sunday": {
+        "start": "2023-05-14T08:00:00.257Z",
+        "end": "2023-05-14T17:00:00.257Z",
+        "isClosed": true
+      }
     },
-    {
-      "name": "Coloring",
-      "description": "Transform your look with our professional coloring services. We use only the highest quality products to give you the best results.",
-      "price": "$80"
+    "_id": "6458f7798b60a5822a668eb7",
+    "firstName": "Cindy",
+    "lastName": "Harper",
+    "businessName": "Cindy Hair salon",
+    "email": "cindy_hair@gmail.com",
+    "address": "2836 San Bruno Ave, San Francisco, CA 94134, United States of America",
+    "website": "http://www.cindy-hair.com/",
+    "nylasLink": "zuzu",
+    "createdAt": "2023-05-08T13:21:55.258Z",
+    "about": "At Chic Cuts Salon, we believe that everyone deserves to look and feel their best. That's why we offer a wide range of hair services to help you achieve your desired look. Our experienced stylists use only the highest quality products to give you the best results. Come visit us today and let us help you achieve the perfect hairstyle!",
+    "services": [
+      {
+        "duration": {
+          "minutes": 30
+        },
+        "category": "Hairstyling",
+        "name": "Consultation",
+        "description": "Consultation understand the client's hair type, texture, and condition, as well as their desired hairstyle.This service can be complementary to other chosen services like haircut or included in other services such as special event or bridal event styling.",
+        "price": 20,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668eb8"
+      },
+      {
+        "duration": {
+          "hours": 1
+        },
+        "category": "Hairstyling",
+        "name": "Special Event Styling",
+        "description": "Designing and creating a hairstyle that complements the client's dress, event and overall look.May involve curling, straightening, braiding, or other styling techniques.",
+        "price": 80,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668eb9"
+      },
+      {
+        "duration": {
+          "hours": 1
+        },
+        "category": "Hairstyling",
+        "name": "Bridal Hairstyling",
+        "description": "Designing and creating a hairstyle that complements the bride's wedding dress, makeup, and overall wedding theme. May involve curling, straightening, braiding, or other styling techniques.",
+        "price": 150,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668eba"
+      },
+      {
+        "duration": {
+          "minutes": 30
+        },
+        "category": "Hairstyling",
+        "name": "Shampoo & Blowout",
+        "description": "Washing the hair with shampoo and conditioner, followed by a blow-dry and styling with a hair dryer and brush.",
+        "price": 30,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668ebb"
+      },
+      {
+        "duration": {
+          "hours": 1
+        },
+        "category": "Hairstyling",
+        "name": "Hair Bleaching",
+        "description": "Hair bleaching workmanship (lighten the natural color of hair) and products that are designed to restore moisture and prevent damage included.",
+        "price": 50,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668ebc"
+      },
+      {
+        "duration": {
+          "hours": 1
+        },
+        "category": "Hairstyling",
+        "name": "Braiding short hair",
+        "description": "Only includes braiding. Does not include washing. Braiding can be done with different types of hair, including natural hair, synthetic hair, or extensions.",
+        "price": 40,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668ebd"
+      },
+      {
+        "duration": {
+          "hours": 1,
+          "minutes": 30
+        },
+        "category": "Hairstyling",
+        "name": "Braiding long hair",
+        "description": "Only includes braiding. Does not include washing. Braiding can be done with different types of hair, including natural hair, synthetic hair, or extensions.",
+        "price": 55,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668ebe"
+      },
+      {
+        "duration": {
+          "hours": 1
+        },
+        "category": "Hairstyling",
+        "name": "Daytime hairstyling",
+        "description": "Washing, hair treatment, styling perie/intins/bucle/impletitbrush, curl, brading, blow-drying",
+        "price": 35,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668ebf"
+      },
+      {
+        "duration": {
+          "minutes": 30
+        },
+        "category": "Hairstyling",
+        "name": "Bangs",
+        "description": "styling (straight or blunt or side-swept or textured)",
+        "price": 20,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668ec0"
+      },
+      {
+        "duration": {
+          "hours": 1
+        },
+        "category": "Hairstyling",
+        "name": "Hair Extensions",
+        "description": "applying extensions. does not include actual extensions as these are bought separately and cost varies depending on product chosen",
+        "price": 50,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668ec1"
+      },
+      {
+        "duration": {
+          "minutes": 45
+        },
+        "category": "Haircut",
+        "name": "Women's haircut short hair",
+        "description": "For hair shorter than shoulder length. Involves trimming or cutting the hair to maintain a desired length while still creating a flattering and stylish shape. Can also involve washing and conditioning the hair, and then combing it out to remove any tangles.",
+        "price": 30,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668ec2"
+      },
+      {
+        "duration": {
+          "hours": 1
+        },
+        "category": "Haircut",
+        "name": "Women's haircut medium hair",
+        "description": "For hair that falls just above or below the shoulders. Involves trimming or cutting the hair to maintain a desired length while still creating a flattering and stylish shape. Can also involve washing and conditioning the hair, and then combing it out to remove any tangles.",
+        "price": 40,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668ec3"
+      },
+      {
+        "duration": {
+          "hours": 1,
+          "minutes": 15
+        },
+        "category": "Haircut",
+        "name": "Women's haircut long hair",
+        "description": "For hair over shoulder length. Involves trimming or cutting the hair to maintain a desired length while still creating a flattering and stylish shape. Can also involve washing and conditioning the hair, and then combing it out to remove any tangles.",
+        "price": 60,
+        "currency": "USD",
+        "_id": "6458f7798b60a5822a668ec4"
+      },
+      {
+        "duration": {
+          "hours": 2
+        },
+        "category": "Hair dying",
+        "name": "Hair Dying",
+        "description": "Price only includes workmanship. Does not include hair dying products. Price of products may vary depending on quantity used. 1 tube of hair dye costs $20. Includes hair dying, washing, hair treatment and styling",
+        "price": 90,
+        "currency": "USD",
+        "_id": "6458f77a8b60a5822a668ec5"
+      },
+      {
+        "duration": {
+          "hours": 3
+        },
+        "category": "Hair dying",
+        "name": "Highlights",
+        "description": "Price only includes workmanship. Does not include hair dying products. Price of products may vary depending on quantity used. 1 tube of hair dye costs $20. Includes hair dying, washing, hair treatment and styling",
+        "price": 100,
+        "currency": "USD",
+        "_id": "6458f77a8b60a5822a668ec6"
+      },
+      {
+        "duration": {
+          "hours": 2
+        },
+        "category": "Hair dying",
+        "name": "Hair Toning",
+        "description": "Adjust the color of lightened or bleached hair",
+        "price": 20,
+        "currency": "USD",
+        "_id": "6458f77a8b60a5822a668ec7"
+      },
+      {
+        "duration": {
+          "hours": 1
+        },
+        "category": "Barbershop",
+        "name": "Men's Haircut",
+        "description": "includes washing, blow drying and styling",
+        "price": 28,
+        "currency": "USD",
+        "_id": "6458f77a8b60a5822a668ec8"
+      },
+      {
+        "duration": {
+          "minutes": 15
+        },
+        "category": "Barbershop",
+        "name": "Beard Trim",
+        "description": "Removing any excess hair growth, shaping the beard to create a defined look, and cleaning up any stray hairs or uneven patches",
+        "price": 10,
+        "currency": "USD",
+        "_id": "6458f77a8b60a5822a668ec9"
+      },
+      {
+        "duration": {
+          "minutes": 30
+        },
+        "category": "Barbershop",
+        "name": "Beard Shaping",
+        "description": "Can include trimming with scissors, using clippers to create a specific length, and shaving or edging the beard to create defined lines and contours. ",
+        "price": 15,
+        "currency": "USD",
+        "_id": "6458f77a8b60a5822a668eca"
+      }
+    ],
+    "__v": 0,
+    "workingHoursFormatted": {
+      "monday": "11:00 AM - 8:00 PM",
+      "tuesday": "11:00 AM - 8:00 PM",
+      "wednesday": "11:00 AM - 8:00 PM",
+      "thursday": "11:00 AM - 8:00 PM",
+      "friday": "11:00 AM - 8:00 PM",
+      "saturday": "closed",
+      "sunday": "closed"
     },
-    {
-      "name": "Styling",
-      "description": "Need a blowout or an updo for a special occasion? Our stylists will make you look and feel amazing.",
-      "price": "$60"
-    },
-    {
-      "name": "Extensions",
-      "description": "Add length and volume to your hair with our high-quality extensions.",
-      "price": "$200"
-    }
-  ],
-  "about": "At Chic Cuts Salon, we believe that everyone deserves to look and feel their best. That's why we offer a wide range of hair services to help you achieve your desired look. Our experienced stylists use only the highest quality products to give you the best results. Come visit us today and let us help you achieve the perfect hairstyle!"
+    "id": "6458f7798b60a5822a668eb7"
+  }
 }

@@ -107,3 +107,10 @@ nlu:
     - real
     - dispatcher
 
+- intent: services_period
+  examples: |
+    - duration
+    - what is the duration of the service?
+    - how long will last?
+    - what is the hair time
+

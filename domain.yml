@@ -9,6 +9,7 @@ intents:
 - business_prices
 - operational_time
 - nature_interaction
+- services_period
 responses:
   utter_greet:
   - text: Hello, I'm [Business Name] Chatbot, and I'm here to help you with your inquiries.
@@ -46,3 +47,4 @@ actions:
 - action_services
 - utter_nature_interaction
 - action_redirect_to_human
+- action_duration
