@@ -1002,7 +1002,7 @@ nlu:
 
     '
   intent: operational_time
-- examples: "- human\n- man \n- person\n- somebody\n- colleague\n- real\n- dispatcher\n"
+- examples: "- human\n- man \n- person\n- somebody\n- colleague\n- real\n- dispatcher\n- I want to talk to a human colleague\n- Am I talking to a human person?\n- Am I talking to a robot?\n- Can I be redirected to a human operator?\n- I want to talk to an operator!\n"
   intent: nature_interaction
 - examples: "- Can they provide a sense of overall service duration by specific resources\
     \ or tasks?\n- Is length a minimum or expected duration in any service?\n- Can\
