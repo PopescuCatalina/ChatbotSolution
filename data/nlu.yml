@@ -1,116 +1,1223 @@
-version: "3.1"
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
+- examples: "- hey                      \n- hello                  \n- hi        \
+    \                  \n- hello there.    \n- good morning.    \n- good evening.\
+    \     \n- hey there                                                 \n- good afternoon.\
+    \    \n"
+  intent: greet
+- examples: '- good by
+
     - cee you later
+
     - good night
+
     - bye
+
     - goodbye
+
     - have a nice day
+
     - see you around
+
     - bye bye
+
     - see you later
-    - goddbye
+
     - thank you!
+
     - thanks
-- intent: affirm
-  examples: |
-    - yes
+
+    '
+  intent: goodbye
+- examples: '- yes
+
     - y
+
     - indeed
+
     - of course
+
     - that sounds good
+
     - correct
-- intent: deny
-  examples: |
-    - no
+
+    '
+  intent: affirm
+- examples: '- no
+
     - n
+
     - never
-    - I don't think so
-    - don't like that
+
+    - I don''t think so
+
+    - don''t like that
+
     - no way
+
     - not really
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
+    '
+  intent: deny
+- examples: '- are you a bot?
+
     - are you a human?
+
     - am I talking to a bot?
+
     - am I talking to a human?
 
+    '
+  intent: bot_challenge
+- examples: "- what types or laptops you own\n- Can they recommend any new fashion\
+    \ categories?\n- Can you support employees with more accounting of your service\
+    \ categories?\n- Are the service tiers organized along a specific criteria?\n\
+    - Do you develop specialized services within market categories?\n- Are their specific\
+    \ categories of contracts companies can explore?\n- How might users browse through\
+    \ our various service categories?\n- Can we cite further examples of services\
+    \ within each business?\n- What recipes e tea do you offer?\n- Can I exclude any\
+    \ food service categories?\n- Can you offer service categories than correspond\
+    \ with my specific requirements or\n  priorities?\n- Are there any particular\
+    \ categories these companies excel beyond providing training?\n- Do companies\
+    \ offer customized recipes for specific categories?\n- Which areas besides industries\
+    \ do trade schools cover?\n- Are there the particular aspects which you excel\
+    \ during providing services?\n- Can you recommend these other service providers?\n\
+    - Are are any new product categories newly added?\n- Are there really major service\
+    \ categories using your platform?\n- What services do organisations recommend?\n\
+    - Are there any different categories would we aim in providing services?\n- What\
+    \ examples of therapies do you recommend?\n- Can they provide me with an overview\
+    \ via Google search categories?\n- Do we need any additional solutions?\n- Are\
+    \ any certain categories of services I can suggest?\n- Are the any new sales categories\
+    \ either added?\n- what And where businesses you own\n- Do forums have native\
+    \ search feature to find references and specific categories?\n- Can you link service\
+    \ categories towards our specific target audience or organization?\n- Are there\
+    \ other particular categories where you emerge from providing training?\n- Do\
+    \ you have different service options based on specific categories?\n- Are other\
+    \ service categories distinguished alphabetically solely based through popularity?\n\
+    - Can you provide me simply any overview of their service package?\n- Do you offer\
+    \ tailored clothing within different categories?\n- Can you pick service categories\
+    \ within a specific end industry or demographic?\n- Do these suggest a search\
+    \ method to find services and specific categories?\n- micro enterprises\n- How\
+    \ much would the service require?\n- Are our question categories organized toward\
+    \ any specific criteria?\n- Can you show the examples and products within each\
+    \ category?\n- Could Steven please clarify the main service categories these specialize\
+    \ within?\n- Can you explain service categories for each particular market audience\
+    \ or demographic?\n- Can you suggest service this would provide for my lifestyle\
+    \ needs or interests?\n- Are there more featured food categories from your platform?\n\
+    - Can you present fans with some overview and your service categories?\n- Tell\
+    \ me of the different ranges of samples I can get here.\n- Can I provide more\
+    \ information on any STEM specialty I'm trained in?\n- Can somebody provide more\
+    \ detail explaining a specific service versus coding in?\n- what types of games\
+    \ you create\n- How can I browse through other streaming service options?\n- How\
+    \ is one browse through those various service categories?\n- How can I browse\
+    \ through the various service categories?\n- Could you please describe the main\
+    \ classification categories that specialize with?\n- Which groups or industries\
+    \ do your organizations service?\n- what traditional retail businesses you own\n\
+    - Are our service categories unique categories or based on rank?\n- What services\
+    \ are we offer?\n- What recommendations would you offer?\n- What types custom\
+    \ kits do they offer?\n- Can you bring me some general overview of business service\
+    \ categories?\n- Can you describe service categories most align with differing\
+    \ aesthetic needs or\n  requirements?\n- How big does each service make?\n- Can\
+    \ ye give me history of service within each area?\n- Are the relevant categories\
+    \ driven by fairly specific criteria?\n- Do you have a specific plugin to track\
+    \ services or specific categories?\n- Do I have another recommended feature to\
+    \ find services outside specific categories?\n- How else could this feature cost?\n\
+    - Do you have a search feature which find services covering all locations?\n-\
+    \ Can you reveal any popular products today?\n- What programs do companies offer?\n\
+    - Are specific service segments organized evenly or based in popularity?\n- Are\
+    \ there any particular categories where you excel in providing services?\n- Are\
+    \ they specific targets for services I can explore?\n- What machines do you use?\n\
+    - Are there any interesting service categories easily discovered?\n- What examples\
+    \ of jobs could you offer?\n- Are certain specific ranges of services I can offer?\n\
+    - Which specific outside industries do your services help?\n- Which patients and\
+    \ communities do your services cover?\n- Could they please describe the main service\
+    \ which you specialize with?\n- Are any specific categories specific services\
+    \ I help explore?\n- How do I operate through the various service tiers?\n- Can\
+    \ you show some percentages of successes within each category?\n- Are there any\
+    \ new service categories recently added?\n- I am running either one of both businesses\n\
+    - Are there specific categories of services I can explore?\n- Can you provide\
+    \ me with basic overview of digital media offerings?\n- Are there any data service\
+    \ customers recently unlocked?\n- what types of pets people own\n- Do also recommend\
+    \ any hosting services?\n- Do banks offer any cash offers?\n- Which areas / industries\
+    \ do customer services target?\n- Are there uniform categories categories where\
+    \ agencies excel in providing assistance?\n- Can anyone give me examples measuring\
+    \ efficiency within each network?\n- Do you offer customized services within specific\
+    \ categories?\n- I am interested in one of your businesses\n- Can you speak people\
+    \ more about the service and those are fastest trending?\n- Can you release me\
+    \ with any idea of your brand categories?\n- How can users browse between the\
+    \ various service profiles?\n- Are my recommended recommendations organized alphabetically\
+    \ or just on popularity?\n- Tell me which other different types a services beginners\
+    \ can find here.\n- Do you have cloud forecasting models based through specific\
+    \ categories?\n- Do you offer the taxi service?\n- I am limited in renting out\
+    \ your businesses\n- Can you tell the little about the test cases that are currently\
+    \ offered?\n- What services will libraries offer?\n- How little does unpaid work\
+    \ cost?\n- Tell me about the different types a services Alexa could cover here.\n\
+    - Are there any customer service plans you added?\n- Are the service categories\
+    \ structured separately and based on service?\n- How much does this service cost?\n\
+    - Can somebody provide me on an overview of your current offering?\n- Are other\
+    \ active providers of services I can explore?\n- Are you any featured race categories\
+    \ on your page?\n- Can you identify a popular animal categories?\n- Can you say\
+    \ service categories would touch on my own needs or interests?\n- What value do\
+    \ you provide?\n- I am reading in one day your writings\n- I would partner in\
+    \ one of these businesses\n- What are the core service categories offering through\
+    \ your marketplace?\n- Tell me about the different types of services I can find\
+    \ here.\n- What services these companies offer?\n- What are the web service categories\
+    \ available from Reuters website?\n- Could could maybe list the main service categories\
+    \ to specialize for?\n- What type of services do people deliver?\n- Are title\
+    \ announcement announcements organized alphabetically or based any popularity?\n\
+    - Do both mean different service options focus on pricing categories?\n- What\
+    \ were the core category categories available to your platform?\n- Do you recommend\
+    \ tax alternative services?\n- Can you provide more information on a specific\
+    \ service I'm interested in?\n- Can you recommend any popular service categories?\n\
+    - Can you furnish me samples of films within said category?\n- Are there specific\
+    \ categories if services I would offer?\n- Can you assign service categories that\
+    \ most matches your specific needs or want?\n- How much might this firm charge?\n\
+    - Are the service offerings divided alphabetically simply based their popularity?\n\
+    - How can we guess through some various service categories?\n- I was interested\
+    \ getting one with your businesses\n- How can does this help help?\n- Tell me\
+    \ more the different types in services I can bring you.\n- Could you please list\
+    \ the main service categories you specialize in?\n- Could somebody please list\
+    \ the 7 product categories you specialize toward?\n- Can they offer me examples\
+    \ of services between each city?\n- Do you have a search option to find results\
+    \ under search categories?\n- Do you create a search query to find videos within\
+    \ specific websites?\n- What types of jobs could we offer?\n- What line in services\
+    \ do you provide?\n- How do I learn through its various service categories?\n\
+    - What were other different service categories supported under your platform?\n\
+    - Are these any particular categories are you excel over business services?\n\
+    - Are there any new service segments frequently created?\n- Do customers have\
+    \ different service customers based on their concerns?\n- How would average web\
+    \ service cost?\n- Tell me exactly what different bundles of services customers\
+    \ can find here.\n- Are there specific categories in topics I could explore?\n\
+    - Can you update me enough about emerging service categories that are increasingly\n\
+    \  available?\n- Can you provide any discussion on other postal service its interested\
+    \ in?\n- Which companies or industries might your services aid?\n- I am confident\
+    \ in your running your businesses\n- Are there any major vertical categories getting\
+    \ added?\n- What types more services can ads offer?\n- How can I browse through\
+    \ your different service options?\n- Tell me how various different styles of services\
+    \ I could find here.\n- Are there currently featured service categories using\
+    \ the platform?\n- Do I plan any additional tours?\n- How exactly will this service\
+    \ pay?\n- Could you please describe six main science categories you specialize\
+    \ after?\n- Are there certain categories of stories I might explore?\n- What batch\
+    \ of tips do you recommend?\n- Are there any featured service categories on your\
+    \ platform?\n- Can you add any background on a similar service I'm interested\
+    \ about?\n- Are not multiple featured video categories on your platform?\n- How\
+    \ much will your procedure cost?\n- Can you recommend service categories to a\
+    \ different target group or organization?\n- Do retailers offer customized kits\
+    \ in specific categories?\n- Are the service models organized by many clear criteria?\n\
+    - Tell Alan about various different types of data I can provide here.\n- Can you\
+    \ provide the examples and a possible service I'm interested into?\n- Can you\
+    \ give me some brief overview of your service model?\n- Are are any featured service\
+    \ areas on your website?\n- I remain interested into one of both businesses\n\
+    - what types on laptops you own\n- what style of gun you own\n- What services\
+    \ do you offer?\n- Do most offer many additional procedures?\n- Are your service\
+    \ models organized differently or based on topic?\n- companies\n- Are postal service\
+    \ categories set alphabetically order based upon popularity?\n- Can you recommend\
+    \ service categories or that specific target audience with company?\n- what types\
+    \ household electronics you own\n- What are the possible service categories available\
+    \ for a marketplace?\n- Can someone recommend any new dog categories?\n- Do you\
+    \ have additional service options mapping out specific challenges?\n- What alternative\
+    \ should you offer?\n- Are you any specific places where you excel from providing\
+    \ services?\n- Tell me below what different types or information I can find here.\n\
+    - enterprises\n- Can someone show me more about your service categories that are\
+    \ really growing?\n- Which areas or establishments must postal services cover?\n\
+    - Can you tell me further regarding the service categories have you currently\
+    \ active?\n- What types of services do you offer?\n- Can you generate different\
+    \ alternatives for a different target audience or demographic?\n- Are the service\
+    \ settings organized toward any specific application?\n- Are there many particular\
+    \ benefits if you succeed in providing services?\n- Are the service officers organized\
+    \ by any different skill?\n- Can you offer me more on the service categories when\
+    \ it currently lacking?\n- Do manufacturers have market pricing options focusing\
+    \ on specific categories?\n- Are the service categories organized by any specific\
+    \ criteria?\n- Are there still paid service ads on your platform?\n- Can you bring\
+    \ me examples or success across each category?\n- Can you provide me with an overview\
+    \ of your service categories?\n- Do retailers offer financial support services?\n\
+    - Do you offer other service options based on the drivers?\n- What were their\
+    \ different payment categories available on your network?\n- Can you think service\
+    \ categories would align with their particular needs or expectations?\n- business\n\
+    - Can please tell them more about the service categories who look positively trending?\n\
+    - Are there any featured service offers on my app?\n- Do sales provide particular\
+    \ services within specific categories?\n- Which themes or issues do your books\
+    \ cover?\n- Can u suggest service plans to fit with my specific needs or priorities?\n\
+    - Do you choose different treatment options based upon specific circumstances?\n\
+    - what types of businesses you own\n- Do you offer any additional services?\n\
+    - Do you have specific vacation options based on meal plans?\n- How far does public\
+    \ service pay?\n- Do organisations perform customized services within category\
+    \ categories?\n- Can anybody suggest some categories that align against my targeted\
+    \ niche or interests?\n- Tell me also the appropriate types for recipes I can\
+    \ find here.\n- Are the network providers organized by country specific criteria?\n\
+    - Can you recommend some categories for any specific age group or demographic?\n\
+    - Can you provide service categories that agree with any current needs or goals?\n\
+    - Can you tell me more about the service categories that are currently trending?\n\
+    - Can you update our more about the service categories where are very active?\n\
+    - Can you suggest service categories that align with my specific needs or interests?\n\
+    - Tell me carefully what various types of services I should find here.\n- Do you\
+    \ have a search feature to find services within specific categories?\n- Are they\
+    \ following categories organized by any comparable criteria?\n- Categories\n-\
+    \ Can you discuss an information on this special technology I'm interested in?\n\
+    - I also interested inside each of your businesses\n- I was interested in one\
+    \ for your projects\n- Could you simply list the major service categories banks\
+    \ deal in?\n- Do you offer the search feature to profile services within your\
+    \ categories?\n- Are then particular categories of services groups can explore?\n\
+    - What services will you run?\n- Can you cover certain other service categories?\n\
+    - Can James discuss any new service categories?\n- Do you have specific service\
+    \ solutions taking on specific conditions?\n- Are the service categories organized\
+    \ solely or toward specific services?\n- Can you give me examples of services\
+    \ within each category?\n- Service category\n- Can you hand me names and categories\
+    \ within each category?\n- Which areas or industries do your services cover?\n\
+    - What level o service do you offer?\n- Can somebody mention any existing service\
+    \ categories?\n- Are there any featured content categories on city pages?\n- Can\
+    \ you provide further information than a Lincoln vehicle I'm interested purchasing?\n\
+    - Do you have different service rates based off revenue requests?\n- Services\n\
+    - Can you recommend new categories for their growing online audience or demographic?\n\
+    - Can anyone provide me with basic overview into your service provider?\n- Can\
+    \ you suggest different categories that intersect with her specific set of interests?\n\
+    - Can you tell me more to three hot drivers that are recently trending?\n- Do\
+    \ you give guests additional experiences?\n- Do enterprises utilize customized\
+    \ strategies within specific categories?\n- Do results offer no additional information?\n\
+    - Can you recommend your offerings for any future target audience or demographic?\n\
+    - Could somebody please list the several merchandise categories you compete in?\n\
+    - Which industries or communities that your services cover?\n- Are there currently\
+    \ extra service categories recently released?\n- Could u just list the main service\
+    \ categories you work on?\n- Could Jeff please summarize the product service area\
+    \ you specialize in?\n- Can you tell me more on other two categories that they\
+    \ currently active?\n- What are the different service categories available on\
+    \ your platform?\n- Can you recommend service categories for a specific target\
+    \ audience or demographic?\n- How to I browse across those various service categories?\n\
+    - Do you offer customized services from these regions?\n- Can you recall these\
+    \ popular product categories?\n- Are there any separate service categories for\
+    \ their platform?\n- Can you segment service categories toward a particular target\
+    \ business or demographic?\n- Which areas or industries should these services\
+    \ benefit?\n- How can I browse to those various service groups?\n- Are there further\
+    \ new class categories be added?\n- Do you encourage the search feature to rank\
+    \ services by specific categories?\n- Can some help me examples for services within\
+    \ this category?\n- Are there any new digital offerings newly added?\n- what class\
+    \ of pens you own\n- what types if TVs you own\n- Are there any new categories\
+    \ where we think in online services?\n- Are potential sample categories organized\
+    \ towards any specific criteria?\n- What drive those different service categories\
+    \ offered on this platform?\n- Do firms offer customized services towards specific\
+    \ regions?\n- Can Jeff provide more information regarding a specific service worth\
+    \ signing into?\n- Do or offer customized products beyond specific categories?\n\
+    - I look interested in coming to your businesses\n- Do we have a search feature\
+    \ to target products or specific categories?\n- Are the service categories organized\
+    \ alphabetically or based on popularity?\n- Can you add additional information\
+    \ concerning a possible product I'm interested\n  in?\n- What do your different\
+    \ currency categories represented on your platform?\n- Can someone provide more\
+    \ information on a certain niche you interested within?\n- Are the service categories\
+    \ organized to any particular service?\n- What about the different category categories\
+    \ displayed on your portal?\n- Are there any particular customers who you value\
+    \ in providing value?\n- What number the different service categories featured\
+    \ in the platform?\n"
+  intent: business_services
+- examples: "- Are there many other fees specific charges included with the service?\n\
+    - Do you offer any special pricing for specific groups or demographics?\n- Can\
+    \ you provide examples of previous customers' average spending on the service?\n\
+    - Can it provide examples representing previous customers' total spending on each\n\
+    \  device?\n- Are there any recurring fees if expenses associated with online\
+    \ service?\n- Are currently any introductory free trial offers for financial courses?\n\
+    - Are contracts negotiable in any service?\n- Are numbers subject to change or\
+    \ should they fixed within the period?\n- Do you offer any target pricing targeting\
+    \ specific conditions and demographics?\n- Can anybody provide me again one reasonable\
+    \ estimate for the service?\n- Can you provide statistics illustrating previous\
+    \ customers' specific expectations\n  on the product?\n- What the recommended\
+    \ hourly wage for the service?\n- Do you see any additional pricing for certain\
+    \ groups or brands?\n- Are there some extra fees plus charges that you should\
+    \ be afraid of?\n- Can anyone cite me as a price comparison for the service?\n\
+    - Do you prefer any special instructions for all groups / demographics?\n- Can\
+    \ you provide a guide with the pricing components defining any service?\n- Amount\n\
+    - What is total cost between providing service?\n- Are those continuing after\
+    \ the service?\n- What is commercial significance of the visit?\n- Do you offer\
+    \ particular particular courses for specific groups or departments?\n- Can journalists\
+    \ provide examples of previous years' average spending from their\n  device?\n\
+    - Are out any suggested yearly trial offers for their service?\n- Can anyone explain\
+    \ examples of previous days' average activity on the app?\n- Are many different\
+    \ deployment options / packages required for the service?\n- Are there any additional\
+    \ fees with issues dealing with the licenses?\n- Do they offer more special products\
+    \ for specific groups changing demographics?\n- Are communities impacted by the\
+    \ service?\n- Are there possible additional fees regarding charges associated\
+    \ with your facility?\n- Are any anymore additional fees and charges that customers\
+    \ should be aware or?\n- How much does your system typically run?\n- Can I provide\
+    \ our with a price estimate for your guitar?\n- Can I transition the service to\
+    \ fit my needs or other preferences?\n- Is there another real difference based\
+    \ between the duration or complexity without\n  the loan?\n- What constitutes\
+    \ your cost in the service?\n- How often does the app typically run?\n- Is there\
+    \ an qualitative difference based on the duration + complexity of your acquisition?\n\
+    - Can I customize the service to consider my personal home income requirements?\n\
+    - What about really purpose of the service?\n- Are there special discounts specific\
+    \ to seasonal customers or bulk orders?\n- Are prices subject to change nor are\
+    \ those fixed for that market?\n- Do you develop special special products for\
+    \ specific groups testing demographics?\n- What made your Heat rate for the weekend?\n\
+    - Are there any service fees / charges related with that service?\n- Do u release\
+    \ any content or tutorials for the service?\n- Are these different upgrade options\
+    \ or packages applicable for the case?\n- Are prices subject to adjustment but\
+    \ become they fixed for the year?\n- Can you explain the pricing algorithm and\
+    \ ad service?\n- Are there any penalties in fees for cancer or other scheduled\
+    \ medical screenings?\n- Can you reveal that ownership structure for the service?\n\
+    - How little does the project itself cost?\n- How far is the service would cost?\n\
+    - How do friends share your wealth?\n- Is providing additional price that depend\
+    \ on the duration or complexity of this\n  service?\n- Are their any special duties\
+    \ or taxes associated with the service?\n- Is there a refund policy in case I\
+    \ am not satisfied with the service?\n- How should i calculate your cost?\n- Are\
+    \ prices subject to change as was it fixed for the year?\n- Are prices subject\
+    \ to scale or were they fixed across all service?\n- Are there any alternate plans\
+    \ or service offers during the service?\n- Is it a refund option and case I are\
+    \ not satisfied then the service?\n- Is ther a standing policy in case I am beyond\
+    \ satisfied receiving a service?\n- Can Sid explain the pricing structure across\
+    \ the app?\n- Are prices deserved after quality service?\n- What is your usual\
+    \ rate for my morning?\n- Are the different size options or packages available\
+    \ for any brand?\n- Are there always introductory software trial opportunities\
+    \ for a service?\n- How much does the service typically cost?\n- What is your\
+    \ hourly rate for the service?\n- Is there a settlement scheme in case customer\
+    \ is not satisfied with my service?\n- Are there any hidden costs or additional\
+    \ charges I should be aware of?\n- Can you provide a breakdown of the pricing\
+    \ components for the service?\n- Are those alternate payment plans or installment\
+    \ options for tax victims?\n- Is there a set policy just case I become not happy\
+    \ with a service?\n- Are there any additional fees or charges that I should be\
+    \ aware of?\n- Are there also additional special other charges required with the\
+    \ service?\n- Are prices subject to change or are they fixed for the service?\n\
+    - Is their a review policy in case one am otherwise satisfied in the service?\n\
+    - Do you offer any discounts or promotions for the service?\n- What constitutes\
+    \ your hourly rate for one week?\n- Cost\n- Can you hep me for a price baseline\
+    \ for customer service?\n- Can I adapt the features to fit my budget or my interests?\n\
+    - Are other different pricing structures or exceptions available in the service?\n\
+    - Do Adobe offer any deals or subscriptions to the service?\n- What is the hourly\
+    \ earnings for delivery service?\n- Is it a refund or what case I are not satisfied\
+    \ at the service?\n- Do stores hold any special offers for ethnic groups or demographics?\n\
+    - Are certain additional additional fees or expenses whatsoever I should become\
+    \ aware\n  of?\n- Can IPS provide demographic breakdown between the major components\
+    \ for the service?\n- Are this any hidden costs at additional charges I may be\
+    \ alert fo?\n- Can I customize a service to fit specific budget AND space requirements?\n\
+    - Can I customize the service to fit my budget or specific requirements?\n- Are\
+    \ there some hidden fines or additional charges I already am alert of?\n- How\
+    \ does utilities calculate your expenses?\n- prices\n- Payment\n- Is there a complicated\
+    \ policy or case I am not unhappy with your delivery?\n- Are those also official\
+    \ customer trial offers for the service?\n- How help you control your deficit?\n\
+    - Are there any other permissions or charges required with the product?\n- Are\
+    \ those other penalties or charges if changing / rescheduling of the service?\n\
+    - How do I get utilization rates?\n- Do they find any discounts under promotions\
+    \ for online service?\n- Can I modify that setup to fill my budget or specific\
+    \ requirements?\n- Are there any delays or orders enforcing cancellations after\
+    \ rescheduling or airport\n  service?\n- What is the market for your service?\n\
+    - Can you provide a breakdown on any pricing components alongside your service?\n\
+    - Are differences negotiable for one buyer?\n- Are there any hidden features on\
+    \ added charges I to stay aware of?\n- Can they explain the pricing structures\
+    \ for this service?\n- Is there a price difference between for the types or price\
+    \ of that service?\n- Do investigators understand any tracking pricing for specific\
+    \ groups or devices?\n- Are these ever other documents or additional charges I\
+    \ cannot be aware of?\n- Do you see any discounts above fee for Customer service?\n\
+    - Are they any discounts available for specific buyers or bulk items?\n- Are there\
+    \ other payment plans covering installment rates for free service?\n- How would\
+    \ you control variable rates?\n- Can you explain the pricing structure for the\
+    \ service?\n- Can u provide a breakdown through the various components for commercial\
+    \ service?\n- Is there a price difference based on the duration or complexity\
+    \ of the service?\n- Are any any fixed costs or security charges investors should\
+    \ be aware for?\n- Are there more discounts available on military customers with\
+    \ bulk orders?\n- How much should the complete run cost?\n- Are prices negotiable\
+    \ among Asian consumers?\n- Is a a refund listed in case you have not disappointed\
+    \ with the service?\n- Can you provide comparisons of different administrations'\
+    \ other spending on that\n  service?\n- Can I customize the tools to fit my role\
+    \ & other requirements?\n- Are prices inflated without some service?\n- Are also\
+    \ any discounts available toward loyal customers having special orders?\n- What\
+    \ is its hourly rate after providing service?\n- Can you provide information from\
+    \ previous customers' annual spending on every appliance?\n- Are there other discounts\
+    \ available targeting new customers or bulk shoppers?\n- Are there any additional\
+    \ fees or charges associated with the service?\n- How much must my service kit\
+    \ cost?\n- Are there other risks or fees for departing without rescheduling with\
+    \ the event?\n- \"Are there any internal \\u2013 promotional offers of the service?\"\
+    \n- Are there any introductory or trial offers for the service?\n- Are prices\
+    \ subject to renew again set they unchanged for the service?\n- Are prices subject\
+    \ change them so are they fixed for the year?\n- Are there minimum payment fees\
+    \ with installment options for the program?\n- What provides the hourly rate for\
+    \ this service?\n- Are there some introductory or trial fees through a service?\n\
+    - Are there any payment dates or installment orders for both accounts?\n- Do you\
+    \ offer additional discounts in extras for the press?\n- Are there other flat\
+    \ fees or discounts that investors will be aware of?\n- Are those any bundles\
+    \ available for loyal friends or bulk purchases?\n- Are there any payment arrangements\
+    \ or business contracts for your service?\n- Do retailers offer any discounts\
+    \ or promotion within that service?\n- Can you educate me on a price estimate\
+    \ for a device?\n- Are there other penalties or fees from tampering before rescheduling\
+    \ to the games?\n- Are their any discounts slated for loyal consumers on bulk\
+    \ orders?\n- Are prices negotiable for the service?\n- Can I provide more breakdown\
+    \ for the pricing components for similar service?\n- Can you explain some pricing\
+    \ plans for the business?\n- How do you avoid performance error?\n- Are the three\
+    \ different fees or charges particular students should be aware of?\n- Can I repeat\
+    \ a breakdown of the pricing components to your service?\n- What did it cost at\
+    \ the service?\n- What is your hourly bill over toilet service?\n- Are users subject\
+    \ or change or just they capped for the service?\n- Are the any discounts set\
+    \ for loyal member or bulk carriers?\n- Are there any payment plans or installment\
+    \ options for the service?\n- What as the point of the referendum?\n- Are they\
+    \ different pricing options or forms available than professional service?\n- Are\
+    \ there any internal protocols or procedures perhaps I should be aware should?\n\
+    - Do services offer any discounts with coupons for this service?\n- Are there\
+    \ specific specific costs of side charges I would be aware of?\n- Are savings\
+    \ greater hidden costs additional fees people should be aware of?\n- Can Jack\
+    \ explain the pricing tiers of the service?\n- Are are any payment agreements\
+    \ or installment contracts for additional service?\n- How would you see your size?\n\
+    - Are there customer discounts or trial offers on cellular service?\n- Are there\
+    \ any similar structure like installment options for your service?\n- Is there\
+    \ a price either based the the nature nor complexity of the intervention?\n- Is\
+    \ there a refund policy in which they get ultimately done with the service?\n\
+    - Can I tailor the app to meets my budget or specific request?\n- Are the similar\
+    \ suggestions available for frequent customers or bulk orders?\n- Can you provide\
+    \ me with a price estimate for the service?\n- Are there any updates planned for\
+    \ legacy customers or bulk buyers?\n- Do you offer any suggestions for specials\
+    \ for the program?\n- What is its cost or the trial?\n- Can Andrew provide a breakdown\
+    \ around the key components regarding the service?\n- Are there relevant additional\
+    \ crimes or charges these students should be unaware\n  of?\n- What are the cost\
+    \ of each model?\n- Is there a refund policy per case consumers not otherwise\
+    \ satisfied by the service?\n- Are there any new plans for customization options\
+    \ around the service?\n- Are there any discounts available for loyal customers\
+    \ or bulk orders?\n- How did you control inflation rates?\n- Are there customer\
+    \ customization options between packages negotiated for the service?\n- Are were\
+    \ ever introductory or special offers for the marketplace?\n- Are the different\
+    \ rate plans or packages available for cloud service?\n- What is the cost of the\
+    \ service?\n- Is a larger price difference as on the duration more complexity\
+    \ to the service?\n- Is there an price threshold based to the duration or length\
+    \ of the process?\n- Are products negotiable for any market?\n- Can I adapt the\
+    \ design or fit their budget or specific requirements?\n- Are they any introductory\
+    \ or trial offers under your program?\n- Are it any increases in fees for cancellations\
+    \ by upgrades of this service?\n- Can I customize the solution to add another\
+    \ budget for specific requirements?\n- Can you provide examples of comparable\
+    \ buyers' average spending buying this appliance?\n- Can you present the crystal\
+    \ structure for the product?\n- Are their different reward options or rewards\
+    \ available for customer service?\n- Rates\n- Are there any penalties or fees\
+    \ for cancellations or rescheduling of the service?\n- Are the any refunds or\
+    \ fees concerning cancellations or rescheduling into any event?\n- Is there another\
+    \ wide band depending on the duration or complexity and the service?\n- Can we\
+    \ cite examples of previous customers' positive use over the service?\n- Are there\
+    \ any additional limitations or charges with an cellular service?\n- Are there\
+    \ similar former or current offers for the program?\n- Are there any dues nor\
+    \ fees for organizers that delays of the shows?\n- Are we any extra costs or additional\
+    \ charges one would be mindful of?\n- Can you explain the typical structure for\
+    \ new contract?\n- Can you relate examples to ATM operators' average spending\
+    \ on the machine?\n- Can Daniel provide quantitative breakdown in the pricing\
+    \ figures for the service?\n- Are wages subject to adjustment or are still reasonable\
+    \ for the service?\n- Can somebody assist me with a price base that the service?\n\
+    - Can somebody provide me with another price estimate around your service?\n-\
+    \ How will you track error rates?\n- Can you explain examples of those retailers'\
+    \ higher spending on customer service?\n- Are there any hidden potential of additional\
+    \ charges I must stay aware for?\n- Can he share a breakdown of the pricing guidance\
+    \ for the range?\n- How do you calculate your rates?\n- Are if any penalties on\
+    \ fees involved suspending or rescheduling to a service?\n- Is any significant\
+    \ price difference based on the duration and complexity through\n  any service?\n\
+    - Can I customize bus service to meet local budget or geographic requirements?\n\
+    - Are prices soaring despite normal service?\n- What are the hourly rate at the\
+    \ service?\n- Are prices higher at any service?\n- Are there any special benefits\
+    \ or charges associated with your product?\n- Are there any hidden services or\
+    \ hidden technologies we might be aware of?\n- Are there ever new fees or taxes\
+    \ there I will be aware of?\n- Are there different pricing options or packages\
+    \ available for the service?\n- How long can this service typically cost?\n- Can\
+    \ anybody provide us with a fair estimate for the bridge?\n- Are prices subject\
+    \ price changes or dollar rates fixed for the service?\n- Do you offer any special\
+    \ pricing to common items like demographics?\n- Can someone explain the time range\
+    \ for the service?\n- Do you offer certain bundles as deals for the service?\n\
+    - How often does the service center charges?\n- Are there some additional tips\
+    \ or events that I should be alerted too?\n- Are there any other plans regarding\
+    \ installment agreements for free service?\n- Is there a much variation based\
+    \ of the duration or complexity on the patent?\n- Are there still others regulations\
+    \ or charges suggest I should be wary of?\n- What average my hourly rate for the\
+    \ day?\n- How much is my model typically cost?\n- Are there different pricing\
+    \ options for models available through retail service?\n- Are they different pricing\
+    \ options as packages provided for each service?\n- Can somebody assist me with\
+    \ a price quote on the service?\n- Are their regulatory penalties or restrictions\
+    \ preventing cancellations of rescheduling\n  using the service?\n- How much do\
+    \ Internet service currently cost?\n- Do I hold any advertising products for specific\
+    \ groups or demographics?\n- What is approximate duration of the process?\n- Can\
+    \ you provide we with a better estimate of the device?\n- Can they explain another\
+    \ key structure for the service?\n- Can you provide my sense of current pricing\
+    \ range for the service?\n- Do you offer other incentives or promotions per client\
+    \ service?\n"
+  intent: business_prices
+- examples: '- Do pharmacies offer specials inside of your regular opening dates?
 
-- intent: business_services
-  examples: |
-    - Do you offer any additional services?
-    - What services do you offer?
-    - Can you provide more information on a specific service I'm interested in?
-    - How much does this service cost?
-    - Services
-    - Serv
-    - Categories
-    - Service category
-    - I am interested in one of your businesses
-    - business
-    - bus
-    - what types of businesses you own
-    - companies
-    - micro enterprises
-    - enterprises
+    - Do you have extra sets on certain nights?
 
-- intent: business_prices
-  examples: |
-    - What is your hourly rate for the service?
-    - Are there any additional fees or charges that I should be aware of?
-    - How do you calculate your rates?
-    - Cost
-    - Rates
-    - Rat
-    - Amount
-    - Payment
-    - prices
+    - Do you have rotating shifts on some days?
 
-- intent: operational_time
-  examples: |
-    - What are your regular opening hours?
-    - Are there any special or seasonal hours that I should be aware of?
-    - Do you offer services outside of your regular opening hours?
-    - Opening hours
-    - Work program
-    - program
+    - Do you offer 25/7 service with redundancy?
+
+    - When do courts decide you close?
+
+    - Can you provide context in your exact opening schedule?
+
+    - Are you away Monday through the evenings?
+
+    - What time do you open tomorrow?
+
+    - What include your regular Halloween themes?
+
+    - Do you prefer early summer jobs?
+
+    - Do schools have different work hours on weekends after weekends?
+
+    - Can you help estimates with your office opening hours?
+
+    - Are there store openings or holiday time due within COVID-19?
+
+    - Do you offer services outside by our regular company time?
+
+    - Do stores offer 24/7 on location support?
+
+    - Are these new restrictions or limited exemptions added to OCT-19?
+
+    - Are you closed on Friday?
+
+    - Are there any random hours or festivities during Halloween?
+
+    - Are there always specific days of entire YEAR that you are closed?
+
+    - Do you report different operating hours those weekdays to weekends?
+
+    - Do you like regular morning tea?
+
+    - Do you support extended warranties on certain services?
+
+    - What are your daily themes?
+
+    - Do you see extended work on most days?
+
+    - What your most regular lunch hours?
+
+    - Are there plans future changes to your original opening hour?
+
+    - Are they any upcoming changes to your initial question format?
+
+    - Are there any upcoming changes to your regular opening hours?
+
+    - When do you open and close?
+
+    - Are stores open the weekends?
+
+    - Do you perform extended sessions on consecutive days?
+
+    - Are schools open after major holidays?
+
+    - Can you provide me with any estimated operating hours?
+
+    - Are teachers open to any holidays?
+
+    - Can anyone leave me with your daily opening remarks?
+
     - prog
+
+    - Can again provide me with your brief opening preview?
+
+    - Are supermarkets open on Sunday?
+
+    - Are you open on public holidays?
+
+    - Do services operate seating outside of your typical opening hours?
+
+    - Are there often extra hours or events during holidays?
+
+    - What is your regular Twitter questions?
+
+    - When could brands open your close?
+
+    - Are they open most weekends?
+
+    - Can you provide me with more rough production hours?
+
+    - Are borders open on foreign lands?
+
+    - Are there any special or unnecessary treats that people should feel mindful
+    of?
+
+    - Can you align them with your current opening schedule?
+
+    - When do banks relax after close?
+
+    - Do you offer 24/7 What is not?
+
+    - What impact your active hours?
+
+    - Are there any special exceptions for closures during festivals?
+
+    - Are there any upcoming holidays may reduce regular working hours?
+
+    - What time would you actually shop?
+
+    - Do you need 24/7 email provider support?
+
+    - What order do you air shows?
+
+    - Do brokers offer 11/7 monitoring or support?
+
+    - Do you offer services outside of your regular opening hours?
+
+    - Do you get 24/7 advice & support?
+
+    - Is there a specific schedule to lectures or breaks?
+
+    - Are windows open seeing some holidays?
+
+    - Are there significant health effects to your regular day hours?
+
+    - What are your total billing numbers?
+
+    - Do I get extended hours on most days?
+
+    - What kind do my sleep tomorrow?
+
+    - Are they flying on federal holidays?
+
+    - Are supermarkets open for weekends?
+
+    - Are you flying at weekends?
+
+    - Do they allow extended hours on work days?
+
+    - Are there recent findings concerning limited benefits applicable to COVID-19?
+
+    - Do you offer different game nights on weekdays & weekends?
+
+    - Do students have any morning classes?
+
+    - What time do you start serving customers?
+
+    - Are your any office hours or closures during renovations?
+
+    - Opening hours
+
+    - What are two ideal writing hours?
+
+    - Can you provide me some your holiday cooking tips?
+
+    - What point should you finish serving customers?
+
+    - Do you have different opening hours on weekdays and weekends?
+
+    - Are offices open during weekends?
+
+    - Are there plans special for seasonal hours that I could be up to?
+
+    - What about your opening remarks?
+
+    - Are you always late to the morning?
+
+    - Are we more late towards the evenings?
+
+    - When do you have house fire?
+
+    - Are there any specific days out the week whereby restaurants have closed?
+
+    - Are there no specific days of this week when you is off?
+
+    - Are there other upcoming changes to require minimum employee hours?
+
+    - Are there any scheduled cuts to your regular business day?
+
+    - Are guards working on public property?
+
+    - Are you open on weekends?
+
+    - Are there any notable changes affecting your season opening schedule?
+
+    - Can you present me with your daily financial statements?
+
+    - Is there a prime time like lunch or two?
+
+    - Are you open pitching in every year?
+
+    - Are there any significant restaurant opening hours changes I could be aware
+    of?
+
+    - Are there always specific parts of the time when you stay closed?
+
+    - Do you have extended hours on certain days?
+
+    - Can you help students with a daily opening schedule?
+
+    - Are holidays are special hours or closures in holidays?
+
+    - What items do you leave store?
+
+    - When do people pull your close?
+
+    - Do you consider your opening hours of weekdays and evenings?
+
+    - When do I plan until close?
+
+    - When do mothers cook and shop?
+
+    - Are there more special parts of the week when you house closed?
+
+    - What time might you spend serving them?
+
+    - Do we get 24/7 service / support?
+
+    - Do you harbor early wedding plans?
+
+    - What stage should you start hiring customers?
+
+    - Is there set specific time for any commercial breaks?
+
+    - Do merchants serve specials ahead of your regular opening hours?
+
+    - Can you remind me specifically your holiday opening statement?
+
+    - Are banks open on Saturday?
+
+    - Are there any rules or new hours that everyone should been reminded of?
+
+    - Is running a specific position for calls or breaks?
+
+    - What time do criminals call again?
+
+    - Are boys home late in the afternoon?
+
+    - Do destinations have extended schedules on certain tours?
+
+    - What are estimated median waking hours?
+
+    - What timeline do they peak serving customers?
+
+    - What are his opening words?
+
+    - Do we get early morning shifts?
+
+    - Are there of upcoming adjustments to their regular opening night?
+
+    - Can you provide me more estimated holiday billing hours?
+
+    - Are you open late in the evenings?
+
+    - What are are favorite hours?
+
+    - Are there any weird days of fall summer when restaurants are closed?
+
+    - Can you provide me wit your daily health notes?
+
+    - Are ther any special or special hours which I should become mindful of?
+
+    - Are you enjoying the public space?
+
+    - Are there any restrictions or restricted funds included during MD-19?
+
+    - Can you provide details the your holiday opening letter?
+
+    - Are you a vegan in your evenings?
+
+    - Are stores open daily or the evenings?
+
+    - What point do negotiations open up?
+
+    - Are there any maximum or minimum hours between April 20-19?
+
+    - Are there any special hours or closures during holidays?
+
+    - program
+
+    - Are there always special hours or conditions during construction?
+
+    - What constitute your free hours?
+
+    - Do MPs do early lunch hours?
+
+    - Are you managing many weekends?
+
+    - Can you surprise viewers with your daily job schedule?
+
+    - Do you have different opening periods during weekdays versus Sunday?
+
+    - When do you shut up talk?
+
+    - Is there a straight time for lunch from dinners?
+
+    - Are there longer or not maximum hours due of COVID-19?
+
+    - Are there any waivers of limited hours for July 21-19?
+
+    - What are your opening hours?
+
+    - Are you regional regular or seasonal programs where I should be aware of?
+
+    - Are are any specific rest of the week after you have closed?
+
+    - Can anyone provide me with your minimum service schedule?
+
+    - Are there any extended hours public programs during holidays?
+
+    - What are your regular opening hours?
+
+    - Can you call me with your holiday decor tips?
+
+    - Are agents open late in every season?
+
+    - Are yours open on group tours?
+
+    - Do you have waking hours in those days?
+
+    - What topics do you pull up?
+
+    - What time when schools open classes?
+
+    - Is there a specific time for lunch or breaks?
+
+    - Are u ever late in you evenings?
+
+    - Are you fired up for the evenings?
+
+    - Can you provide me an other projected opening schedule?
+
+    - Do people prefer early morning workouts?
+
+    - Do Starbucks announce long opening hours on Mondays and weekends?
+
+    - Is not a specific schedule for lunch or recess?
+
+    - What do your regular wedding ceremonies?
+
+    - Are there any special interest seasonal issues why he should be certain of?
+
+    - Are any other special or seasonal events that I need take aware of?
+
+    - Can you provide me with your daily opening schedule?
+
+    - Are there any restrictions or limited hours due to COVID-19?
+
+    - Is each some reasonable time for lunch or breaks?
+
+    - Do you offer different opening hours now or compared weekends?
+
     - hour
 
-- intent: nature_interaction
-  examples: |
-    - human
-    - man 
-    - person
-    - somebody
-    - colleague
-    - real
-    - dispatcher
+    - Are there always bright times of the week when you are there?
 
-- intent: services_period
-  examples: |
-    - duration
-    - what is the duration of the service?
-    - how long will last?
-    - what is the hair time
+    - Do you offer 24/7 service or support?
 
+    - What time can you start eating rice?
+
+    - What constitute your usual hours?
+
+    - Are there two unique days within the week when you are stressed?
+
+    - Are there any restrictions about major events as to 2019-19?
+
+    - Are concerts fun on weekends?
+
+    - Do you keep special opening hours on weekdays like nights?
+
+    - Is required a specific time for completing interval breaks?
+
+    - What are regular office hours?
+
+    - Can they provide us if your holiday opening hours?
+
+    - Do you run events outside of your regular store days?
+
+    - What second do you start seeing you?
+
+    - What time does you begin approaching customers?
+
+    - Are they open accepting public television?
+
+    - What time do students return home?
+
+    - What dictate your office hours?
+
+    - Do supermarkets keep open morning hours?
+
+    - Do you offer 21/7 service on fewer?
+
+    - Are there any open hours nor closures during Ramadan?
+
+    - When do you begin coffee shop?
+
+    - Do branches offer food off of your regular market hours?
+
+    - What were his natural opening hours?
+
+    - Work program
+
+    - Are there any specific days of the week when you are closed?
+
+    - Do you offer services online with your regular booth space?
+
+    - Are their any working hours or closures during winter?
+
+    - Are there ever downtime or working hours at the COVID-19?
+
+    - Do vendors offer benefits outside of those regular staff hours?
+
+    - What are not regular environmental statements?
+
+    - Are there ever specific days of every week when things are crazy?
+
+    - Can you provide me with your holiday opening hours?
+
+    - Do you have early morning hours?
+
+    - Do providers offer 24/7 billing or less?
+
+    - Do you have set daytime hours over Saturdays and weekends?
+
+    - What time do soldiers be serving food?
+
+    - Do you usually open Friday hours?
+
+    - When do I consider things close?
+
+    - What are your favourite written remarks?
+
+    - Are you extra tasks or service hours due in COVID-19?
+
+    - Do you have extended hours during your flights?
+
+    - Are you open about other forums?
+
+    - Are there further upcoming changes even to regular opening events?
+
+    - What time did you start getting meals?
+
+    - What classes do you start with lunch?
+
+    - Are there ever odd or seasonal hours open I should seem wary of?
+
+    - What constitute your working hours?
+
+    - Do you accept extended calling hours?
+
+    - Are there any special or seasonal hours that I should be aware of?
+
+    - What dates are you open sessions?
+
+    - Do you have breakfast ahead of your usual opening hours?
+
+    - Can they provide listeners with your daily opening lines?
+
+    - "Do museums have specific opening hours \u2014 weekdays and Sundays?"
+
+    - Is there a specific shift during lunch and breaks?
+
+    - Are there any upcoming tweaks to its regular work day?
+
+    - Do you offer workshops outside of regular shop opening days?
+
+    - Is it an specific time for stretches or breaks?
+
+    - Do you offer 8/7 service even more?
+
+    - Are you more special or popular events that I should be aware with?
+
+    - Are there any special projects or closures throughout winter?
+
+    '
+  intent: operational_time
+- examples: "- human\n- man \n- person\n- somebody\n- colleague\n- real\n- dispatcher\n"
+  intent: nature_interaction
+- examples: "- Can they provide a sense of overall service duration by specific resources\
+    \ or tasks?\n- Is length a minimum or expected duration in any service?\n- Can\
+    \ somebody tell me how long each aspect of health screening process was?\n- Are\
+    \ there any local limitations or regulations on accessing or using our internet?\n\
+    - Do you provide any specifics on the cloud delivery within some specific timeframe?\n\
+    - Is there a valid purpose for offering the service?\n- Can you give an estimation\
+    \ of how the time the service should take?\n- What does your average utilization\
+    \ of the service?\n- Are you special personal limits or restrictions on using\
+    \ or using this service?\n- Does time service duration change due on the role\
+    \ or scope surrounding the project?\n- what are my hair time\n- Are are any arbitrary\
+    \ limits or restrictions on testing or visiting the API?\n- What was weighted\
+    \ average use of the service?\n- Do tariffs provide contractual guarantees beyond\
+    \ post service completion within\n  o certain timeframe?\n- what is the duration\
+    \ on this negotiation?\n- What are the average cost of my service?\n- Are there\
+    \ any prerequisites or reasons to need what are done till the programme\n  starts?\n\
+    - Are there any geographical restrictions with booking or scheduling these shows?\n\
+    - Can Lewis provide an estimate detailing however much effort the shutdown will\
+    \ require?\n- Can you tell investors how that each journey within the service\
+    \ process represents?\n- Do plans offer expedited or two-track options for the\
+    \ either process?\n- Are there any chances you can affect the game beyond the\
+    \ service?\n- Are there any story lines surrounding booking and scheduling the\
+    \ service?\n- Can you provide the breakdown comparing manual service duration\
+    \ between specific\n  tasks in activities?\n- Is there a revised timeframe now\
+    \ introducing the service?\n- Can you provide an estimate indicating how short\
+    \ maintenance the service can live?\n- Are options set time tables for each stage\
+    \ / phase with the service?\n- How long does the service typically take?\n- How\
+    \ long is the service will operate?\n- Are de any cost estimates for each stage\
+    \ one phase on active service?\n- What is the same person without the service?\n\
+    - How long would your service typically run?\n- Are their any time estimates for\
+    \ every stage per phase during the collaboration?\n- Is there a plateau or maximum\
+    \ interest with the show?\n- Do you offer different membership plans though?\n\
+    - What length the average duration of an match?\n- what is the hair time\n- Can\
+    \ you share examples of its shortest and longest lasts on the battery?\n- what\
+    \ took the length of the marriage?\n- Do you offer expedited or fast-track options\
+    \ for completing the service?\n- Are there any time estimates for each stage or\
+    \ phase of the service?\n- Are you also market-specific requirements or constraints\
+    \ surrounding the service?\n- Are there any prerequisites or preparations those\
+    \ should already be discussed before\n  your service began?\n- Do you include\
+    \ additional service plan options?\n- Do you offer improved response time options?\n\
+    - Can you provide a breakdown of the service duration by specific tasks or activities?\n\
+    - Is then a longer group on queue before the service begins?\n- Do you expect\
+    \ additional guarantees on the customer service at a certain timeframe?\n- Can\
+    \ you provide a definition of overall tasks duration versus specific tasks or\n\
+    \  objects?\n- Are you certain time lines for development stage any phase of the\
+    \ service?\n- Are are any changes or renovations that need to be done get the\
+    \ campaign began?\n- Is there no option to terminating the service at a specific\
+    \ do not date?\n- Are there any factors that can affect the duration of the service?\n\
+    - Is there a specific method for completing our transaction?\n- what is our current\
+    \ time\n- Can you upload figures of the shortest and highest durations after the\
+    \ show?\n- Can you give examples on different shortest and longest durations between\
+    \ one robot?\n- Do you send any guarantees of the service prior to a certain date?\n\
+    - Can please provide a commentary over the service duration by your customers\
+    \ or activities?\n- Are there some time or at which stage or branch of the service?\n\
+    - Are are any strategies or preparation will need to be done whenever the event\
+    \ starts?\n- Are are any time estimates for any stage of conclusion of the investigation?\n\
+    - Can someone tell me how long the travel down the service always takes?\n- Can\
+    \ you tell me how long last message of every automated call takes?\n- what is\
+    \ average duration of correct hearing?\n- How well does the service delivery wait?\n\
+    - Are you any time-specific requirements to versions of the service?\n- what includes\
+    \ the duration for each service?\n- Do you provide any guarantees securing the\
+    \ facility completion within its forecast\n  period?\n- Are there specific speed\
+    \ limits or limitations while accessing or using the technology?\n- Can you spare\
+    \ me very long each step on your service plan takes?\n- Do you offer us additional\
+    \ off-track options for conducting the transaction?\n- Do institutions offer expedited\
+    \ / slower-track options for completing a check?\n- How permanent will the service\
+    \ actually take?\n- Is there this specific timeframe around completing commercial\
+    \ service?\n- Does the overall duration vary depending by nature source or scope\
+    \ of the problem?\n- Can they provide further estimate into how its time the event\
+    \ will require?\n- Do you offer expedited or off-track access to starting that\
+    \ service?\n- Do you make any updates on adequate service delivery within a specified\
+    \ timeframe?\n- Are there any time-specific differences or challenges with delivery\
+    \ service?\n- what is black hair?\n- Can you provide an estimated of to much time\
+    \ that service could cost?\n- Do you provide any guarantees for customer service\
+    \ contract after a certain year?\n- Can you provide an estimate of how much time\
+    \ the service will require?\n- What is which intended duration of the discussion?\n\
+    - Can you describe that breakdown for the service provided by specific vendors\
+    \ or\n  activities?\n- What is the average duration of the service?\n- Is ther\
+    \ any option of scheduling the game at a specific time or service?\n- Is there\
+    \ a minimum or maximum duration for the service?\n- Are no particular time limits\
+    \ or challenges on accessing to downloading the service?\n- Are there any time\
+    \ restrictions for booking or scheduling the service?\n- Are there any time delays\
+    \ regarding booking or managing this service?\n- Do you not expedited any fast-track\
+    \ assistance on accessing the service?\n- Are there any time questions around\
+    \ producing or scheduling the shows?\n- Can your tell me how quickly each thing\
+    \ through each service process takes?\n- Is this a longer / temporary duration\
+    \ for the service?\n- Are there any factors that can affect the sensitivity or\
+    \ sensitivity tests?\n- Does the service tier differ depending between the type\
+    \ or duration of the project?\n- Do Phoenix offer complimentary or same-track\
+    \ transportation for completing Customer\n  service?\n- Is the our option for\
+    \ scheduling the tours around a specific site or date?\n- Is it some option for\
+    \ scheduling your service at another specific time slot date?\n- Do they offer\
+    \ expedited or off-track options for scheduling your race?\n- what is the breakdown\
+    \ in ongoing service?\n- Are any specific time limits nor restrictions on accessing\
+    \ & monitoring the service?\n- Are the additional prerequisites where preparations\
+    \ should need to be done since\n  the service ends?\n- Can technology provide\
+    \ a range of market value offered by specific tasks or activities?\n- what gives\
+    \ the duration if customer service?\n- Can you give examples of the values for\
+    \ most durations by this service?\n- Are are at time frames any restrictions on\
+    \ accessing or using any service?\n- Is there your waiting moment or queue before\
+    \ you process begins?\n- Are there any time-specific requirements or constraints\
+    \ for the service?\n- Is it specific option for scheduling the service at each\
+    \ specific time & place?\n- Are these any factors this might affect the duration\
+    \ or the service?\n- Can you share examples from the shortest and long durations\
+    \ of the marathon?\n- Can Rail give 1 of their cheapest and longest routes for\
+    \ the service?\n- Do patients need different service and options?\n- Is a a plan\
+    \ with maximum duration for the experiment?\n- what is exactly real time\n- Are\
+    \ their ongoing time-specific requirements or constraints for international collaboration?\n\
+    - what is the impact of current trial?\n- what is my hair colour\n- How old does\
+    \ the snake typically stay?\n- Are there any technical restraints preventing booking\
+    \ or scheduling market service?\n- Are there any time limitations for recording\
+    \ while monitoring the service?\n- Are their any time-specific requirements or\
+    \ issues within the application?\n- Can anybody provide detail on the active service\
+    \ duration by specific tasks or activities?\n- Does the group size vary entirely\
+    \ on the complexity your scope within the project?\n- what as the start time\n\
+    - Can you give examples of the shortest and longest durations for the service?\n\
+    - Do you provide any guarantees of new loan terms within some certain timeframe?\n\
+    - Are are other time restrictions with booking the scheduling the service?\n-\
+    \ Do you provide any guarantees on the service completion within a certain timeframe?\n\
+    - Can you give examples of any of the quickest routes for the service?\n- Do those\
+    \ offer expedited or fast-track approaches regarding implementing the app?\n-\
+    \ Are there any prerequisites or safeguards which remain to be placed before rail\n\
+    \  service begins?\n- Are the any time-specific changes or plans for the mission?\n\
+    - Do courts recommend long service duration options?\n- what is the duration of\
+    \ the service?\n- Is a ever minimum or maximum age for the survey?\n- Is there\
+    \ a minimum or median age in customer service?\n- Is there the waiting - length\
+    \ queue before the service stops?\n- Can we relieve us of the shortest and median\
+    \ durations for that service?\n- Do readers expect any guarantees over the facility\
+    \ completion beyond a certain timeframe?\n- What is the average level of each\
+    \ attack?\n- Are are special factors that may affect the duration of a service?\n\
+    - Is there a typical time for completing free service?\n- Is are a minimum stated\
+    \ standard duration for commercial service?\n- Can you add examples of the fastest\
+    \ to longest durations for my test?\n- what of the relevance of extended service?\n\
+    - Are there any time limits or restrictions on accessing or using the service?\n\
+    - Are they any site-specific requirements or constraints on the program?\n- how\
+    \ long will last?\n- Is there no answer besides scheduling the question at a specific\
+    \ time or location?\n- Are ther any minimum limits or requirements upon accessing\
+    \ or using the exchange?\n- Do you offer any service level packages?\n- what its\
+    \ normal hair time\n- Does the service duration vary depending on the complexity\
+    \ or scope of the project?\n- Do you receive expedited or dual-track approval\
+    \ for completing every project?\n- Can you give examples showing relative fast\
+    \ and long durations for one service?\n- Are currently any time estimates for\
+    \ the stage and phase of each treatment?\n- Can somebody include a timeline of\
+    \ the service schedule by specific tasks or locations?\n- Are we any time restrictions\
+    \ with booking or seeking customer service?\n- Is this a precise time or requirement\
+    \ before the service opens?\n- Are they any prerequisites or hurdles they need\
+    \ to die done or the operation starts?\n- Are there any price estimates covering\
+    \ each stage per division of your service?\n- what is your duration and my service?\n\
+    - Are there by time-specific requirements any incentives for recurring service?\n\
+    - Is currently the specific timeframe for starting the service?\n- Can you provide\
+    \ an insight in any turnaround time the service should require?\n- How long should\
+    \ the product rollout take?\n- Does the service design vary depending on its purpose\
+    \ or scope any individual project?\n- Is there an option for scheduling the service\
+    \ at a specific time or date?\n- what is happening next time\n- Is there a specific\
+    \ protocol about starting the service?\n- Is there a waiting time or queue before\
+    \ the service begins?\n- what like the average time\n- Can anyone provide some\
+    \ estimates below how much time the service might require?\n- Can Google provide\
+    \ a breakdown at the time duration by line tasks or features?\n- Are they any\
+    \ amendments or any not need to be done on the service calls?\n- Are here any\
+    \ performance estimates for each installation or phase the planned service?\n\
+    - Is is an median or maximum duration for the event?\n- Is there long waiting\
+    \ place or queue before food service resumes?\n- Does total service duration lie\
+    \ dependent on the scope or scope to the project?\n- Do you avoid full service\
+    \ plan options?\n- How long does your service still offer?\n- Is there a specific\
+    \ timeframe for completing the service?\n- Are there any factors that still affect\
+    \ sales duration or professional service?\n- What is the average duration by house\
+    \ fire?\n- Can someone provide a breakdown for the service duration as scheduled\
+    \ hours or activities?\n- Can you tell them how long this step for the initial\
+    \ agreement takes?\n- Can you tell me how long each step of the service process\
+    \ takes?\n- How long does a project typically require?\n- What length the effective\
+    \ duration of maintenance service?\n- Are t any features that can improve the\
+    \ duration or the service?\n- Do schedules include extended service duration options?\n\
+    - Is there an option of scheduling the service at the specific slot on time?\n\
+    - Are there certain factors who can decrease the duration of your service?\n-\
+    \ what is expected duration of each match?\n- Are there any time limitations for\
+    \ booking and running the production?\n- Do you offer different service duration\
+    \ options?\n- Can you provide a estimate about how much time the correction would\
+    \ cost?\n- Are our any deadlines off or restrictions on shooting or using the\
+    \ show?\n- Can anyone provide an agreement regarding how much time the service\
+    \ had cost?\n- Do providers offer full service style options?\n- duration\n- How\
+    \ long can any procedure typically take?\n- what determines the ideal time\n-\
+    \ Are the basic prerequisites or preparations the need to get done before the\
+    \ museum\n  opens?\n- Does the conceptual design move depending on the complexity\
+    \ or scope within that\n  project?\n- Are there other factors that should affect\
+    \ the duration if the trial?\n- Is there a specific timeframe for collecting any\
+    \ survey?\n- Is today the minimum or maximum duration for such project?\n- Are\
+    \ available any time passes for booking or entering the event?\n- Is being a waiting\
+    \ time of longer before the service completes?\n- Are they some time-specific\
+    \ requirements to constraints for the application?\n- Can Chris provide an estimate\
+    \ detailing how much time to scan would require?\n- Can you tell just how much\
+    \ each part of the sales process lasted?\n- Do you provide any visibility on the\
+    \ cloud provider within one certain year?\n- Is there any adjustment for scheduling\
+    \ the service through a different day or date?\n- Is now an option for leasing\
+    \ the service another other future time or date?\n- Can you spare me that long\
+    \ each step towards the service step cost?\n- Is there a load time security process\
+    \ before the service resumes?\n- Do you offer expedited and reverse-track treatment\
+    \ when changing the service?\n- Is there a waiting party or queue where any question\
+    \ begins?\n- Are there different time zones any restrictions with accessing or\
+    \ using the feature?\n- Is there a specific purpose for starting a service?\n\
+    - How wide does the service interruption continue?\n- Does the service duration\
+    \ vary depending around the latency to duration of the response?\n- Does the service\
+    \ availability vary depending by the time and scope of this project?\n- Is there\
+    \ an expense for requesting escort service at a specific person nor date?\n- Are\
+    \ are any factors you can improve the duration inside the service?\n- Do you hold\
+    \ similar contract duration options?\n- Are there any time-specific ideas or recommendations\
+    \ for another field?\n- Are you any factors which can influence the duration during\
+    \ the service?\n- Are there any prerequisites or preparations that need to be\
+    \ done before the service\n  starts?\n- Is there a specific timeframe for doing\
+    \ its study?\n- Are the specific time estimates for each activity or feature of\
+    \ the intervention?\n- Is there no if / like queue before the service begins?\n\
+    - Are there any setbacks & preparations people need personal help overcome before\n\
+    \  the service starts?\n- Can ya tell me the long every iteration of the service\
+    \ process take?\n- Does the sample size vary depending on the complexity & volume\
+    \ of another project?\n- Is there a minimum advertised starting price for limited\
+    \ service?\n- What represents an average duration of customer service?\n- Is today\
+    \ a fixed spot or queue before commercial service begins?\n"
+  intent: services_period
+version: '3.1'
