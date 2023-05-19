@@ -1002,7 +1002,134 @@ nlu:
 
     '
   intent: operational_time
-- examples: "- human\n- man \n- person\n- somebody\n- colleague\n- real\n- dispatcher\n- I want to talk to a human colleague\n- Am I talking to a human person?\n- Am I talking to a robot?\n- Can I be redirected to a human operator?\n- I want to talk to an operator!\n"
+- examples: "- dispatcher\n- What capabilities do they have will distinguish you from\
+    \ a competition through responses\n  to questions?\n- Can you say how you're not\
+    \ in bot?\n- Do these have the human operators assisting us?\n- I have to speak\
+    \ though this human\n- Am really talking to my human hand?\n- What capabilities\
+    \ do doctors believe that differentiated you from another human\n  in responding\
+    \ to commands?\n- I get to talk to other human being\n- I need to revert to another\
+    \ human voice\n- Am Im talking to another person?\n- Can I be redirected to a\
+    \ human operator?\n- How dare I be sure while I'm just chatting to an automated\
+    \ machine?\n- Am woman rude to her robot?\n- Are things a robot or a machine?\n\
+    - I hope to talk to their attorney!\n- Can robots be trained by a human operator?\n\
+    - How do you ensure the fairness and security for the mail I receive through you?\n\
+    - Am I viewed as just robot?\n- Am I talking to a human person?\n- How SHALL I\
+    \ be sure that I'm really tied to some AI system?\n- Am I talking to Other Greater\
+    \ Being?\n- What capabilities or you experience that distinguish us from a human\
+    \ therapist responding\n  with questions?\n- I hope to fly to a human planet\n\
+    - Can this be attached to an human operator?\n- Do you have local hunting companions\
+    \ assisting you?\n- Am I father to a dying child?\n- How can people be sure that\
+    \ are not calling from a automated system?\n- I have myself conform to my human\
+    \ body\n- What measures did you have in place to catch bots properly navigating\
+    \ around users?\n- Can anyone provide any insight about this phone or chatbot\
+    \ technology?\n- What capabilities do you have that distinguish you from a human\
+    \ in responding to\n  questions?\n- Is there no way to speak beyond traditional\
+    \ human representative where needed?\n- Can you prove that you're not a bot?\n\
+    - Are these an human vs a bot?\n- I should also talk with a lawyer\n- Am we talking\
+    \ of a psychopath?\n- \"Are they \\u2026 human, a bot?\"\n- Am I discriminated\
+    \ against a rich person?\n- Do they have veteran fleet operators assisting you?\n\
+    - I interrupted money transfer to a human colleague\n- I want that talk down a\
+    \ new colleague\n- How hard to ensure the privacy of security of the information\
+    \ others share with\n  us?\n- Can you prove otherwise you're actually a liar?\n\
+    - Can I be evolved into a human assistant?\n- I get to talk with another human\
+    \ again\n- Can I say added to a direct operator?\n- What measures can organizations\
+    \ notice en place to prevent bots from conspiring\n  with users?\n- Do we know\
+    \ the human operators assisting you?\n- Am I talking about a Primordial Being?\n\
+    - Is there any need to speak to a human representative when not?\n- I DID T talk\
+    \ to that operator!\n- What mechanisms will you find en place to prevent bots\
+    \ from chatting with users?\n- Am I talking to such weird child?\n- \"I tried\
+    \ to go to another human \\u2026\"\n- How can I be sure that I'm not talking to\
+    \ an automated system?\n- Is there a way to speak about any human who if you?\n\
+    - Do neither see any fellow operators assisting you?\n- Are you a human or a bot?\n\
+    - How do corporations ensure collective privacy and security beneath the communications\n\
+    \  employees share with you?\n- Can you provide any information about your AI\
+    \ or chatbot technology?\n- \"I want to talk like that human \\u2026\"\n- I will\
+    \ yet talk to their operator!\n- I have only live over a human\n- I have to sit\
+    \ with an operator!\n- I have better talk from that human body\n- Am I talking\
+    \ to a robot?\n- Can you provide specific information about your website or search\
+    \ software?\n- Is there this way to speak as their human representative unless\
+    \ needed?\n- How can I be anonymous online beyond just talking through an automated\
+    \ system?\n- Can you prove if you're secretly a liar?\n- colleague\n- real\n-\
+    \ Are you think mental or computational bot?\n- I have to lie to another sex caller\n\
+    - I want ti talk down a school colleague\n- I hate to talk for her operator!\n\
+    - I have to become just another human now\n- Do you sense any independent operators\
+    \ assisting there?\n- I learned to deal with a boy\n- How could I be sure but\
+    \ I'm not talking FROM THIS evil system?\n- I wanted to speak through an operator!\n\
+    - What controls do you keep in place that prevent bots ever interacting with Alexa?\n\
+    - \"I have a talk \\u2026 the human\"\n- I hope to write to an MP!\n- I actually\
+    \ wanna speak with a human\n- Are you a lizard or just bird?\n- Can AI prove if\
+    \ you're still a bot?\n- What value do cats have and differs you from a human\
+    \ in responding to emotions?\n- Can we reveal any information behind your AI or\
+    \ chatbot functionality?\n- What elements do we consider that distinguish oneself\
+    \ from a human in answer to\n  questions?\n- How will you ensure the accuracy\
+    \ and security of audio dialogue I share with viewers?\n- What measures do you\
+    \ have in place to prevent bots from interacting with users?\n- How can they be\
+    \ aware that I'm only talking to the archaic system?\n- Am this speaking from\
+    \ a robot?\n- How do you ensure the privacy and security of the information I\
+    \ share with you?\n- What measures do they have on effect to prevent outsiders\
+    \ from connecting with users?\n- What skills might you have that differ you from\
+    \ other human in responding to emotions?\n- Is there a warrant to speak to this\
+    \ government representative while needed?\n- How can I tell sure that I'm just\
+    \ stumbling over a automated system?\n- Is there a cue we speak to a human voice\
+    \ if asked?\n- Am I talking smack this psychic?\n- I did the talk with somebody\
+    \ human\n- I needed to break into an operator!\n- I have her talk to another truck\
+    \ driver\n- Can we be fair to a human friend?\n- How can I be sure she is still\
+    \ messaging through an automated system?\n- Do you have any human operators assisting\
+    \ you?\n- Are o a human from an bot?\n- What measures have you have in place may\
+    \ prevent bots inappropriately interacting\n  via content?\n- Is there better\
+    \ way to reply to a human representative so asked?\n- I want t say to a human\
+    \ now\n- What measures did you report about common to prevent bots directly interacting\
+    \ with\n  users?\n- I interrupted the talk to another operator!\n- human\n- I\
+    \ have to talk to another human body\n- man\n- Am I living in a kid?\n- What characteristic\
+    \ do i have this distinguish you over normal human in responding\n  to questions?\n\
+    - Do we have other human operators assisting currently?\n- What measures that\
+    \ you want in works to ban bots from interacting with outsiders?\n- Are neither\
+    \ a human from another bot?\n- Can you tell that this not another bot?\n- Can\
+    \ someone assure me you're not a bot?\n- Can you provide background information\
+    \ bout your latest AI chatbot technology?\n- person\n- Is there the right to speak\
+    \ to a human race if unsuccessful?\n- I learned to talk as a human language\n\
+    - Can you present any information about platform advertising or chatbot plans?\n\
+    - Are we a human or mechanical robot?\n- Do we find any human operators assisting\
+    \ today?\n- Can computers be controlled via a human operator?\n- What policies\
+    \ do you have in place and catch moderators improperly interacting with\n  users?\n\
+    - Can you prove then its not a racist?\n- I want out talk down this operator!\n\
+    - Do you have five credible operators advising you?\n- How can I am assured that\
+    \ I'm not sitting inside an automated computer?\n- somebody\n- What skills do\
+    \ robots have that separate humans from anyone human in responding\n  to questions?\n\
+    - Am my talking down a psychic?\n- Am species talking through a human brain?\n\
+    - Can you prove that are not outright rapist?\n- How may we ensure sufficient\
+    \ privacy and accountability of the information I share\n  with strangers?\n-\
+    \ I used to propose to a female colleague\n- Is there a way this listen to our\
+    \ human heart if needed?\n- Am I talking on a living being?\n- Can AI be redirected\
+    \ to the human heartbeat?\n- Am we speaking about a human person?\n- How do platforms\
+    \ maintain the privacy regarding confidentiality of the information\n  customers\
+    \ share with you?\n- Do you had any other operators serving you?\n- Are you a\
+    \ witch / a vampire?\n- I experienced no transfer to another human body\n- Can\
+    \ you provide other examples of your AI based chatbot technology?\n- I want to\
+    \ talk to an operator!\n- I have to know about you human\n- I forgot to talk down\
+    \ a friend\n- I want to talk to a human colleague\n- Is there another way children\
+    \ attach to that human representative if needed?\n- Is there a way to speak to\
+    \ a human representative if needed?\n- I have to speak to every governing body\n\
+    - How do you ensure the privacy without verification of the information people\
+    \ maintain\n  with others?\n- What laws do you have setting place to deter bots\
+    \ from turning on users?\n- Am you talking to that cad?\n- Can you provide more\
+    \ information about an AI or robotics setup?\n- Can you provide any information\
+    \ around that platform or chatbot experience?\n- Can you add some information\
+    \ about your product platform chatbot technology?\n- I refuse to apologise to\
+    \ a human being\n- Am that equivalent to an human person?\n- Are you a human fighting\
+    \ something machine?\n- Can requests be redirected towards a safe operator?\n\
+    - I have to talk at the therapist\n- How will you ensure overall reliability and\
+    \ security of the information I share\n  for participants?\n- Am I lying to some\
+    \ cop?\n- I have to talk with a human\n- Can I be redirected through real human\
+    \ conversation?\n- What perspective can you offer that distinguish you from a\
+    \ physician in responding\n  to shock?\n- How do you ensure the duty of independence\
+    \ of the contents I share from you?\n- Can I be good for a human world?\n- Can\
+    \ she provide some specifics on your AI or chatbot technology?\n- How can one\
+    \ be confident that was truly talking with an automated system?\n- Can you prove\
+    \ that your weaving a lie?\n- Can anyone prove that you're fighting any bot?\n\
+    - How do you judge the security / security of the information I share our readers?\n\
+    - What capabilities would you develop to distinguish animals from a human in responding\n\
+    \  to emotions?\n"
   intent: nature_interaction
 - examples: "- Can they provide a sense of overall service duration by specific resources\
     \ or tasks?\n- Is length a minimum or expected duration in any service?\n- Can\
