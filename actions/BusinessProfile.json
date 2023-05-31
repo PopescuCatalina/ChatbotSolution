@@ -197,8 +197,8 @@
         "duration": {
           "hours": 2
         },
-        "category": "Hair dying",
-        "name": "Hair Dying",
+        "category": "Hair dyeing",
+        "name": "Normal Dyeing",
         "description": "Price only includes workmanship. Does not include hair dying products. Price of products may vary depending on quantity used. 1 tube of hair dye costs $20. Includes hair dying, washing, hair treatment and styling",
         "price": 90,
         "currency": "USD",
@@ -208,7 +208,7 @@
         "duration": {
           "hours": 3
         },
-        "category": "Hair dying",
+        "category": "Hair dyeing",
         "name": "Highlights",
         "description": "Price only includes workmanship. Does not include hair dying products. Price of products may vary depending on quantity used. 1 tube of hair dye costs $20. Includes hair dying, washing, hair treatment and styling",
         "price": 100,
@@ -219,7 +219,7 @@
         "duration": {
           "hours": 2
         },
-        "category": "Hair dying",
+        "category": "Hair dyeing",
         "name": "Hair Toning",
         "description": "Adjust the color of lightened or bleached hair",
         "price": 20,

@@ -5,15 +5,19 @@
 # https://rasa.com/docs/rasa/custom-actions
 #
 #
-# This is a simple example for a custom action which utters "Hello World!"
-
 from typing import Any, Text, Dict, List
 
+import rasa_sdk.events
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
 import json
 from datetime import datetime
-
+from difflib import SequenceMatcher
+from sentence_transformers import SentenceTransformer, util
+import pandas as pd
+from rasa_sdk.events import ActionReverted
+from collections import OrderedDict
 
 class ActionReadJSON(Action):
         def name(self) -> Text:
@@ -65,22 +69,41 @@ class ActionReadRates(Action):
         jsonFile = open('./actions/BusinessProfile.json',
                         'r')
         values = json.load(jsonFile)
-        final = ''
-        category = set()
-        for criteria in values['data']['services']:
-            element = str(criteria['category'])
-            category.add(element)
-
-        for i in category:
-            sent = "For category " + i + " we have the following services"
-            concat = ''
+        entity1 = tracker.get_slot("entity1")
+        #rate = tracker.get_slot("rate")
+        similar = 0
+        if entity1 != None:
             for criteria in values['data']['services']:
-                if criteria['category'] == i:
-                    concat += ", Service " + str(criteria['name']) + " : " + str(criteria['price']) + str(
-                        criteria['currency'])
-            final += sent + concat + "\n\n"
+                if criteria['name'] == entity1:
+                    similar = 1
+                    dispatcher.utter_message(
+                        text=(f"\U0001F916 The price for the service {entity1}: is " + str(
+                            criteria['price']) + " " + str(criteria['currency'])))
+                    slot_value = None
+                    return [SlotSet("rate", slot_value)]
+                    #return [SlotSet("entity1", slot_value)]
 
-        dispatcher.utter_message(text=("\U0001F916" + final))
+            if similar == 0:
+                return [rasa_sdk.events.FollowupAction("action_service_category_2")]
+        else:
+            final = ''
+            category = set()
+            for criteria in values['data']['services']:
+                element = str(criteria['category'])
+                category.add(element)
+
+            for i in category:
+                sent = "For category " + i + " we have the following services"
+                concat = ''
+                for criteria in values['data']['services']:
+                    if criteria['category'] == i:
+                        concat += ", Service " + str(criteria['name']) + " : " + str(criteria['price']) + str(
+                            criteria['currency'])
+                final += sent + concat + "\n\n"
+
+            dispatcher.utter_message(text=("\U0001F916" + final))
+
+        #dispatcher.utter_message(text=("\U0001F916 Nu exista rate"))
         return []
 
 class ActionReadServices(Action):
@@ -99,15 +122,12 @@ class ActionReadServices(Action):
             element = str(criteria['category'])
             category.add(element)
 
-        for i in category:
-            sent = "For category " + i + " we have the following services"
-            concat = ''
-            for criteria in values['data']['services']:
-                if criteria['category'] == i:
-                    concat += ", Service " + str(criteria['name'])
-            final += sent + concat + "\n\n"
 
-        dispatcher.utter_message(text=("\U0001F916 Here are our service categories, " + final))
+        sent = "At this moment we have a selection of "+ str(len(category))+" categories of services available: "
+        for i in category:
+            final += i + ", "
+
+        dispatcher.utter_message(text=("\U0001F916" + str(sent) + str(final) + ". \n What category of services would interest you?"))
         return []
 #
 class ActionRedirectToHuman(Action):
@@ -131,22 +151,134 @@ class ActionReadDuration(Action):
         jsonFile = open('./actions/BusinessProfile.json',
                         'r')
         values = json.load(jsonFile)
+        entity1 = tracker.get_slot("entity1")
+        time = tracker.get_slot("time")
         final = ' '
-        for criteria in values['data']['services']:
-            sent = []
-            for i in criteria['duration']:
-                sent.append(i)
-            if len(sent) == 2:
-                for x in range(1):
-                    concat = str(criteria['name']) + " duration " + str(
-                        criteria['duration']['hours']) + " hours" + " and " + str(
-                        criteria['duration']['minutes']) + " minutes"
-            else:
-                if sent[0] == 'minutes':
-                    concat = str(criteria['name']) + " duration " + str(criteria['duration']['minutes']) + " minutes"
-                if sent[0] == 'hours':
-                    concat = str(criteria['name']) + " duration " + str(criteria['duration']['hours']) + " hours"
-            final += concat + "\n\n"
+        #if time != None:
+        if entity1 != None:
+            for criteria in values['data']['services']:
+                if criteria['name'] == entity1:
+                    sent = []
+                    for i in criteria['duration']:
+                        sent.append(i)
+                    if len(sent) == 2:
+                        for x in range(1):
+                            concat = str(criteria['name']) + " duration " + str(
+                                criteria['duration']['hours']) + " hours" + " and " + str(
+                                criteria['duration']['minutes']) + " minutes"
+                    else:
+                        if sent[0] == 'minutes':
+                            concat = str(criteria['name']) + " duration " + str(
+                                criteria['duration']['minutes']) + " minutes"
+                        if sent[0] == 'hours':
+                            concat = str(criteria['name']) + " duration " + str(
+                                criteria['duration']['hours']) + " hours"
 
-        dispatcher.utter_message(text=("\U0001F916 Here are our service duration, " + final))
+                    final += concat + "\n\n"
+                    dispatcher.utter_message(
+                        text=(f"\U0001F916 Here are our service duration, for {str(criteria['name'])}: " + final))
+                    slot_value = None
+                    return [SlotSet("time", slot_value)]
+                    #return [SlotSet("entity1", slot_value)]
+
+            if final == ' ':
+                return [rasa_sdk.events.FollowupAction("action_service_category_2")]
+
+
+        else:
+            final = ' '
+            for criteria in values['data']['services']:
+                sent = []
+                for i in criteria['duration']:
+                    sent.append(i)
+                if len(sent) == 2:
+                    for x in range(1):
+                        concat = str(criteria['name']) + " duration " + str(
+                            criteria['duration']['hours']) + " hours" + " and " + str(
+                            criteria['duration']['minutes']) + " minutes"
+                else:
+                    if sent[0] == 'minutes':
+                        concat = str(criteria['name']) + " duration " + str(criteria['duration']['minutes']) + " minutes"
+                    if sent[0] == 'hours':
+                        concat = str(criteria['name']) + " duration " + str(criteria['duration']['hours']) + " hours"
+                final += concat + "\n\n"
+
+            dispatcher.utter_message(text=("\U0001F916 Here are our service duration, " + final))
+
+        #dispatcher.utter_message(text=("\U0001F916 Nu exista duration"))
         return []
+
+class ActionServicecategory2(Action):
+    def name(self) -> Text:
+        return "action_service_category_2"
+
+    def similar(self, a, b) -> float:
+        model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+
+        # Compute embedding for both lists
+        embedding_1 = model.encode(a, convert_to_tensor=True)
+        embedding_2 = model.encode(b, convert_to_tensor=True)
+        return float((util.pytorch_cos_sim(embedding_1, embedding_2)))
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        entity1 = tracker.get_slot("entity1")
+        time = tracker.get_slot("time")
+        rate = tracker.get_slot("rate")
+        jsonFile = open('./actions/BusinessProfile.json',
+                       'r')
+        values = json.load(jsonFile)
+        concat = ''
+        sim = []
+        name = []
+        description = []
+        price = []
+        currency = []
+        category_found=0
+        similarity_max = 0
+        if entity1 != None:
+            for criteria in values['data']['services']:
+                similarity = self.similar(criteria['name'], entity1)
+                if similarity > 0.5:
+                    name.append(criteria['name'])
+                    sim.append(similarity)
+                    description.append(criteria['description'])
+                    price.append(criteria['price'])
+                    currency.append(criteria['currency'])
+
+
+            dataset = pd.DataFrame({'Name': name, 'Similarity': sim, 'Description':description , 'Price': price, 'Currency':currency })
+            sorted_dataset = dataset.sort_values('Similarity', ascending=False)
+            for index, row in sorted_dataset.iterrows():
+                if row['Similarity'] >= 0.7:
+                    category_found += 1
+                    if row['Similarity'] >= 0.98:
+                      similarity_max = 1
+                      ful_sim = str(row['Description'])
+                      dispatcher.utter_message(text=(f"\U0001F916 Awesome, we have {str(row['Name'])} which describe: " + ful_sim))
+                      if time != None and similarity_max == 1:
+                          return [rasa_sdk.events.FollowupAction("action_duration")]
+                      if rate != None and similarity_max == 1:
+                          return [rasa_sdk.events.FollowupAction("action_rates")]
+                    else:
+                      concat += " Service " + str(row['Name'])
+
+                # if there is an element with the similarity score less than 0.7 and category_found = 0 then in this case we don't have another fit and it is a unique match
+                if row['Similarity'] <= 0.7 and category_found == 0:
+                    category_found += 1
+                    concat += " Service " + str(row['Name'])
+            concat += " \n .Which service are you interested in?"
+
+            if similarity_max == 0:
+                if category_found >= 1:
+                    dispatcher.utter_message(text=(f"\U0001F916 Here are our services similar to your requirement of {entity1} : " + concat))
+                else:
+                    dispatcher.utter_message(text=(f"\U0001F916 I can't find any information about the service {entity1} "))
+
+
+        # if rate != None and similarity_max == 1:
+        #         return [rasa_sdk.events.FollowupAction("action_rates")]
+        # if time != None and similarity_max == 1:
+        #    return [rasa_sdk.events.FollowupAction("action_duration")]
+
+        return []
+

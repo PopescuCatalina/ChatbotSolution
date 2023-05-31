@@ -1,4 +1,5 @@
 services:
+
   rasa-pinger:
     image: rasa/rasa:3.5.5-full
     networks: ['rasa-project2']
@@ -14,12 +15,11 @@ services:
       - '*'
 
   action-service-pinger:
-    image: rasa/rasa-sdk:3.5.1
+    image: pinger_requirements:latest
     networks: ['rasa-project2']
     ports:
     - "5055:5055"
     volumes:
     - "./actions:/app/actions"
-
 
 networks: {rasa-project2: {}}

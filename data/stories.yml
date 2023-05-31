@@ -30,12 +30,16 @@ stories:
   steps:
   - action: action_listen
   - intent: services_period
+    entities :
+      - time : "duration"
   - action: action_duration
 
 - story: business_prices_path
   steps:
   - action: action_listen
   - intent: business_prices
+    entities :
+      - rate : "price"
   - action: action_rates
 
 - story: business_services_path
@@ -77,3 +81,16 @@ stories:
   steps:
   - action: action_listen
   - intent: deny
+
+- story: services_path5
+  steps:
+  - action: action_listen
+  - intent: serv_category_1
+    entities :
+      - entity1 : "Women's haircut short hair"
+      - time : "duration"
+      - rate : "price"
+  - action: action_service_category_2
+
+
+
