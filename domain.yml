@@ -6,42 +6,66 @@ intents:
 - deny
 - bot_challenge
 - business_services
-- business_prices
+- business_prices:
+     use_entities :
+      - rate
 - operational_time
 - nature_interaction
-- services_period
-#- serv_category_0
-- serv_category_1
+- services_period:
+     use_entities:
+      - time
+- serv_category_1:
+     use_entities:
+      - entity1
+      - time
+      - rate
+- availability_for_book
+- booking_slots:
+     use_entities:
+      - booking
+      - entity1
 entities:
   - entity0
   - entity1
   - time
   - rate
+  - booking
 slots:
-  entity0:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: entity0
-  entity1 :
-    type : text
-    influence_conversation: true
-    mappings :
-      - type : from_entity
-        entity : entity1
   time :
     type : text
-    influence_conversation : true
     mappings :
       - type : from_entity
         entity : time
   rate :
     type : text
-    influence_conversation : true
     mappings :
       - type : from_entity
         entity : rate
+  booking :
+    type : text
+    mappings :
+      - type : from_entity
+        entity : booking
+  entity1 :
+    type : text
+    mappings :
+      - type : from_entity
+        entity : entity1
+
+entity_roles:
+  time:
+    - role: primary
+      group: 1
+  rate:
+    - role: primary
+      group: 1
+  booking:
+    - role: primary
+      group: 1
+  entity1 :
+    - role : primary
+      group : 2
+
 responses:
   utter_greet:
   - text: Hello, I'm [Business Name] Chatbot, and I'm here to help you with your inquiries.
@@ -80,5 +104,10 @@ actions:
 - utter_nature_interaction
 - action_redirect_to_human
 - action_duration
-#- action_service_category
 - action_service_category_2
+- availability_for_book_action
+- booking_slots_action
+- availability_for_book_no
+- availability_for_book_yes
+- booking_slots_yes
+- booking_slots_no

@@ -224,6 +224,7 @@ class ActionServicecategory2(Action):
         entity1 = tracker.get_slot("entity1")
         time = tracker.get_slot("time")
         rate = tracker.get_slot("rate")
+        booking = tracker.get_slot("booking")
         jsonFile = open('./actions/BusinessProfile.json',
                        'r')
         values = json.load(jsonFile)
@@ -259,6 +260,8 @@ class ActionServicecategory2(Action):
                           return [rasa_sdk.events.FollowupAction("action_duration")]
                       if rate != None and similarity_max == 1:
                           return [rasa_sdk.events.FollowupAction("action_rates")]
+                      if booking != None and similarity_max == 1:
+                          return [rasa_sdk.events.FollowupAction("booking_slots_action")]
                     else:
                       concat += " Service " + str(row['Name'])
 
@@ -282,3 +285,83 @@ class ActionServicecategory2(Action):
 
         return []
 
+class ActionAvailabilityforBooking(Action):
+    def name(self) -> Text:
+        return "availability_for_book_action"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text=(f"\U0001F916 Do you want to check availability?"))
+        return []
+
+
+class ActionBookingSlots(Action):
+    def name(self) -> Text:
+        return "booking_slots_action"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        entity1 = tracker.get_slot("entity1")
+        booking = tracker.get_slot("booking")
+        if entity1 != None:
+            dispatcher.utter_message(text=(f"\U0001F916 Do you want to book a slot for {entity1} ?"))
+        else:
+            dispatcher.utter_message(text=(f"\U0001F916 Please provide us a service for booking!"))
+            return [rasa_sdk.events.FollowupAction("action_service_category_2")]
+        return []
+
+class ActionBookingSlotsYes(Action):
+    def name(self) -> Text:
+        return "booking_slots_yes"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        entity1 = tracker.get_slot("entity1")
+        booking = tracker.get_slot("booking")
+        if entity1 != None:
+            dispatcher.utter_message(text=(f"\U0001F916 We are glad that you want to reserve a slot for {entity1}"))
+            slot_value = None
+            return [SlotSet("booking", slot_value)]
+        else:
+            dispatcher.utter_message(text=(f"\U0001F916 Please provide us a service for booking!"))
+            return [rasa_sdk.events.FollowupAction("action_service_category_2")]
+        return []
+
+class ActionBookingSlotsNo(Action):
+    def name(self) -> Text:
+        return "booking_slots_no"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text=(f"\U0001F916 We are sorry that you do not want to reserve a slot"))
+        return []
+
+class ActionAvailabilityforBookingYes(Action):
+    def name(self) -> Text:
+        return "availability_for_book_yes"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text=(f"\U0001F916 We are glad that you want to check the availability of a slot"))
+        return []
+
+class AActionAvailabilityforBookingNo(Action):
+    def name(self) -> Text:
+        return "availability_for_book_no"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text=(f"\U0001F916 We are sorry that you do not want to check the availability for a slot"))
+        return []

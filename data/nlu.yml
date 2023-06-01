@@ -31,523 +31,523 @@ nlu:
 - examples: "- Can Sid [Beard Trim](entity1) recommend a hairstyle that will fit my current shape? 
 
     - Can anyone [Shampoo](entity1) recommend this hairstyle that would highlight my face beautifully? 
-    
+
     - Can we identify a hairstyle [Shampoo](entity1) that would capture that face shape? 
-    
+
     - Can you explain some hairstyle [Hair Extensions](entity1) which can suit my face shape? 
-    
+
     - Can someone [Women's haircut long hair](entity1) pick top hairstyle who would suit my face shape? 
-    
+
     - Can you recommend a film [Hair Bleaching](entity1) which would cover my face better? 
-    
+
     - Can you recommend a brand [Hair Extensions](entity1) if may suit my face nicely? 
-    
+
     - Can you recommend makeup [Bridal Hairstyling](entity1) template that may suit each face shape? 
-    
+
     - Can ya list a product [Bangs](entity1) that would suit my eye shape? 
-    
+
     - Can I recommend a color [Bangs](entity1) perhaps would suit his face shape? 
-    
+
     - Are their some special treatments [Hair Extensions](entity1) or therapies specifically for this? 
-    
+
     - Are [Hair Extensions](entity1) there any special classes or facilities specifically for women? 
-    
+
     - Are [Shampoo](entity1) there any other treatments on alternatives available for him? 
-    
+
     - Are [Beard Shaping](entity1) there any active shots or therapies out for asthma? 
-    
+
     - Are [Men's haircut long hair](entity1) there any special treatments drug therapies sought from you? 
-    
+
     - Are [Blowout](entity1) here any adverse effects like therapies available for hair? 
-    
+
     - Are there more special and alternative therapies [Bridal Hairstyling](entity1) necessary for hair? 
-    
+
     - Are [Consultation](entity1) there available special treatments -- therapies available toward dementia? 
-    
+
     - Are [Daytime hairstyling](entity1) there any special treatments new therapies helpful if YOU? 
-    
+
     - Are there other new treatments [Consultation](entity1) or therapies applied to hair? 
-    
+
     - Can you service others [Shampoo](entity1) concerning your  services? 
-    
+
     - Can you ask me about prior [Braiding long hair](entity1) experiences? 
-    
+
     - Can you add anything [Hair Bleaching](entity1) further your services? 
-    
+
     - Can you tell questions [Hair Extensions](entity1) regarding your intelligence services? 
-    
+
     - Can you inform them about discount [Braiding short hair](entity1) services? 
-    
+
     - Can you tell them about my  [Braiding short hair](entity1) regime? 
-    
+
     - Can they tell it about your [Special Event Styling](entity1) sessions? 
-    
+
     - What sorts of hair [Men's Haircut](entity1) extensions can retailers offer, and any? 
-    
+
     - What types or hair [Daytime hairstyling](entity1) extensions do scientists recommend, if specific? 
-    
+
     - What types out hair [Shampoo](entity1) extensions do users choose, given any? 
-    
+
     - What types for code [Highlights](entity1) extensions do they offer, if possible? 
-    
+
     - What UI [Daytime hairstyling](entity1) or browser extensions do you offer, at any? 
-    
+
     - What sorts of browser [Braiding short hair](entity1) extensions do you offer, currently available? 
-    
+
     - What types other PHP [Highlights](entity1) extensions do you want, if available? 
-    
+
     - What variations [Women's haircut long hair](entity1) in hair extensions do you favor, at any? 
-    
+
     - What prescription [Highlights](entity1) hair hair products do you like, if any? 
-    
+
     - What style [hair Bleaching](entity1) – hair extensions do you need, and any? 
-    
+
     - Are [Hair Toning](entity1) there any specific trademarks & categories would you use for your brand? 
-    
+
     - Are there more specific products [Bangs](entity1) or brands that others like outside your shop? 
-    
+
     - Are [Bangs](entity1) there customer specific products specific experiences that consumers use through your services? 
-    
+
     - Are [Men's Haircut](entity1) there special apps products other technologies that you use for other services? 
-    
+
     - Are [Women's haircut short hair](entity1) there also specific products & brands that you incorporate within your presentation? 
-    
+
     - Are [Special Event Styling](entity1) you any other products versus services that you use for your kitchen? 
-    
+
     - Are [Daytime hairstyling](entity1) there any special processes and processes that you use for your business? 
-    
+
     - Are [Bangs](entity1) there no specific items or brands that I use during your packaging? 
-    
+
     - Are your five specific products [Braiding short hair](entity1) or brands that consumers favor for your meat? 
-    
+
     - Do you offer bridal community [Toning](entity1) salon hair tutorials? 
-    
+
     - Do you offer bridal [Highlights](entity1) and standard hair cuts? 
-    
+
     - Do services [Beard Trim](entity1) offer bridal or wedding consultation care? 
-    
+
     - Do restaurants [Bangs](entity1) offer free or wedding hair cuts? 
-    
+
     - Do you sell bridal or event [Men's haircut](entity1) decor services? 
-    
+
     - Do you support bridal [Shampoo](entity1) or registry service services? 
-    
+
     - Do they do bridal to wedding hair [Women's haircut medium hair](entity1) services? 
-    
+
     - Do publishers [Men's haircut](entity1) offer subscription or wedding registry services? 
-    
+
     - Do counselors [Toning](entity1) offer event or wedding planning services? 
-    
+
     - Do you practice [Braiding long hair](entity1) bridal or maternity hair styling? 
-    
+
     - Can perhaps suggest your styling [Shampoo](entity1) services for such occasions? 
-    
+
     - Can ya explain your daily services [Beard Trim](entity1) at special occasions? 
-    
+
     - Can more explain your styling style [Women's haircut medium hair](entity1) for special situations? 
-    
+
     - Can if explain your core [Braiding short hair](entity1) services for special clients? 
-    
+
     - Can we explain these styling choices [Men's haircut](entity1) for special occasions? 
-    
+
     - Can you explain your reservation [Braiding short hair](entity1) services for hotel guests? 
-    
+
     - Can you explain your important services [Highlights](entity1) through most occasions? 
-    
+
     - Can anyone [Men's haircut](entity1) explain digital styling cues for special occasions? 
-    
+
     - Can you tailor your core [Braiding short hair](entity1) services for special customers? 
-    
+
     - Can I prep your styling [Women's haircut long hair](entity1) services for special holidays? 
-    
+
     - What services [Toning](entity1) do consumers obtain via your salon? 
-    
+
     - What services [Women's haircut short hair](entity1) do consumers derive from your salon? 
-    
+
     - What services [Women's haircut medium hair](entity1) do you perform at smaller businesses? 
-    
+
     - What business [Special Event Styling](entity1) could you offer at a salon? 
-    
+
     - What questions [Beard Shaping](entity1) will you offer at my salon? 
-    
+
     - What services [Braiding short hair](entity1) do I offer outside your hospital? 
-    
+
     - What services [Hair Toning](entity1) can sales showcase at your salon? 
-    
+
     - What services [Normal dye](entity1) may you advertise within your salon? 
-    
+
     - Do you offer free spa [Braiding short hair](entity1) options for recommendations in addition to hair treatments? 
-    
+
     - Do you offer conventional spa service [Highlights](entity1) or gifts in addition or catering services? 
-    
+
     - Do malls [Women's haircut short hair](entity1) offer other spa services or suggestions in relation to hair loss? 
-    
+
     - Do you suggest any wellness [Women's haircut short hair](entity1) packages and treatments in addition their hair services? 
-    
+
     - Do you offer selling makeup [Braiding short hair](entity1) tools or accessories in addition our hair services? 
-    
+
     - Do you offer this educational treatment [hair Bleaching](entity1) or events in addition to commercial services? 
-    
+
     - Do they offer special medical benefits [Hair Extensions](entity1) or treatments of addition to hair services? 
-    
+
     - Do vendors [Braiding long hair](entity1) offer any spa services or therapy by addition to food products? 
-    
+
     - Do these offer certain other services [Braiding long hair](entity1) or treatments in opposition to grooming services? 
-    
+
     - Do dispensaries [Highlights](entity1) offer herbal spa services other services in comparison to hair services? 
-    
+
     - Do you provide much research [Blowout](entity1) for highlighting services? 
-    
+
     - Do you receive hair [Blowout](entity1) coloring scalp styling services? 
-    
+
     - Do you provide hair [Women's haircut long hair](entity1) coloring by modeling capabilities? 
-    
+
     - Do you provide baby removal [Daytime hairstyling](entity1) or grooming services? 
-    
+
     - Do you provide hair extensions [Bangs](entity1) or traditional techniques? 
-    
+
     - Do you prescribe skin coloring [Consultation](entity1) or highlighting products? 
-    
+
     - Do I provide hair [hair Bleaching](entity1) coloring or beauty products? 
-    
+
     - Do you have hair cutting a highlighting [Braiding long hair](entity1) services? 
-    
+
     - Do you sell free styling [Hair Extensions](entity1) or highlighting services? 
-    
+
     - Do doctors [Beard Trim](entity1) provide hair coloring or chop kits? 
-    
+
     - Are [Daytime hairstyling](entity1) there any additional services including attractions found near your salon? 
-    
+
     - Are [Bangs](entity1) there any additional techniques or treatments common throughout your clinic? 
-    
+
     - Are the any clinical services [Men's haircut](entity1) or treatments provided at your facility? 
-    
+
     - Are [Braiding long hair](entity1) there any other services or treatments listed at a shelter? 
-    
+
     - Are [Consultation](entity1) there any alternative surgeries or treatments available through your hospital? 
-    
+
     - Are [Men's haircut](entity1) there any additional methods besides treatments available outside your practice? 
-    
+
     - Are [Braiding long hair](entity1) ther any additional tools or materials available from your salon? 
-    
+
     - Are [Women's haircut long hair](entity1) complementary or additional services or accommodations available at that salon? 
-    
+
     - Are [Bangs](entity1) there certain exotic oils or treatments available at his salon? 
-    
+
     - Are [Blowout](entity1) there any additional drugs and treatments available at the pharmacy? 
-    
+
     - Are there other specialized treatments [Shampoo](entity1) necessary with damaged or lost hair? 
-    
+
     - Are [Beard Shaping](entity1) there clinically safe treatments available for damaged breast dry tissue? 
-    
+
     - Are [Highlights](entity1) there any chemical treatments known for pulling or dying hair? 
-    
+
     - Are [Daytime hairstyling](entity1) they any specialized treatments available to damaged of reconstructed hair? 
-    
+
     - Are [Shampoo](entity1) you any specialized procedures recommended for damaged or dry tissues? 
-    
+
     - Are [Bridal Hairstyling](entity1) there highly specialized techniques offered after damaged or dry hair? 
-    
+
     - Are your any specialized techniques [Beard Shaping](entity1) available for burned or dry tissue? 
-    
+
     - Are [Hair Toning](entity1) there still specialized treatments available for damaged partially infected lungs? 
-    
+
     - Are [Daytime hairstyling](entity1) there any special treatments recommended for damaged / dry tongues? 
-    
+
     - Are [Daytime hairstyling](entity1) any sufficient specialized treatments available for damaged or deteriorating organs? 
-    
+
     - Can anyone [Hair Extensions](entity1) recommend feminine hair care products when having healthy hair? 
-    
+
     - Can you recommend some common maintenance [Hair Extensions](entity1) benefits for maintaining healthy hair? 
-    
+
     - Can you explain any hair [Bridal Hairstyling](entity1) relief routines for maintaining dry hair? 
-    
+
     - Can we name any hair [Women's haircut short hair](entity1) genetics professionals for maintaining healthy hair? 
-    
+
     - Can we recommend any skin [Braiding long hair](entity1) care products for maintaining dry skin? 
-    
+
     - Can you provide any hair [Daytime hairstyling](entity1) care methods recommend retaining healthy hair? 
-    
+
     - Can anyone [Bridal Hairstyling](entity1) recommend any hair strengthening remedies for maintaining long hair? 
-    
+
     - Can you recommend any beauty [Consultation](entity1) care strategies to keeping healthy hair? 
-    
+
     - Can you recommend specific health [Blowout](entity1) care services for maintaining healthy roots? 
-    
+
     - Can you give any facial care [Braiding short hair](entity1) regimes for getting healthy hair? 
-    
+
     - Can you provide information [Men's haircut](entity1) for your daily smoothing at similar services? 
-    
+
     - Can you talk details [Braiding short hair](entity1) or alternative hair reduction or removal services? 
-    
+
     - Can you disclose details [Hair Toning](entity1) about your nail smoothing salon massage experience? 
-    
+
     - Can doctors [Braiding short hair](entity1) provide details about overall doctor appointment or straightening routine? 
-    
+
     - Can we share [Hair Bleaching](entity1) details about your face smoothing online beauty services? 
-    
+
     - Can you explain details [Braiding long hair](entity1) in your current smoothing / straightening techniques? 
-    
+
     - Can you expect information [Daytime hairstyling](entity1) regarding your hair from personal straightening services? 
-    
+
     - Can anyone [Blowout](entity1) explain information surrounding your hair dye or straightening services? 
-    
+
     - Can you give details [Blowout](entity1) concerning alternative website smoothing / straightening services? 
-    
+
     - Can you reveal details [Consultation](entity1) of my hair removal or straightening routine? 
 
     - Are [Daytime hairstyling](entity1) there still special treatment or therapies here for this? 
-    
+
     - Are [Daytime hairstyling](entity1) there still obvious treatments or therapies needed over hair? 
-    
+
     - Are [Bridal Hairstyling](entity1) there any beauty treatments new methods available in hair? 
-    
+
     - Are [Bridal Hairstyling](entity1) there any positive effects as therapies performed for hair? 
-    
+
     - Are [Bridal Hairstyling](entity1) there any special help & therapies available from women? 
-    
+
     - Are [Normal dye](entity1) more more special kinds of therapies available for hair? 
-    
+
     - Are [Normal dye](entity1) there also special treatments or cures needed for cancer? 
-    
+
     - Are [Daytime hairstyling](entity1) there many special products like potions available for hair? 
-    
+
     - Are [Daytime hairstyling](entity1) ther any cure techniques and therapies available for hair? 
-    
+
     - Are [Daytime hairstyling](entity1) were any special treatments or therapies suggested against blindness? 
-    
+
     - Can anyone [Daytime hairstyling](entity1) visualize a hairstyle that would suit my curves nicely? 
-    
+
     - Can you an alternative hairstyle [Daytime hairstyling](entity1) that would compliment my head shape? 
-    
+
     - Can each envision [Bridal Hairstyling](entity1) a hairstyle that would accommodate my lip shape? 
-    
+
     - Can someone [Bridal Hairstyling](entity1) recommend a model that would suit my personal style? 
-    
+
     - Can anyone [Bridal Hairstyling](entity1) give some hairstyle that best suit my face shape? 
-    
+
     - Can you recommend a technique [Bridal Hairstyling](entity1) that might suit any wave shape? 
-    
+
     - Can Amazon [Daytime hairstyling](entity1) show a one that would suit my face more? 
-    
+
     - Can you suggest a hairstyle [Bridal Hairstyling](entity1) that may compliment my current shape? 
-    
+
     - Can someone [Normal dye](entity1) recommend a hairstyle that might change the face shape? 
-    
+
     - Can you recommend another hairstyle [Normal dye](entity1) of can suit my jaw shape? 
-    
+
     - Can you tell this from your training [Normal dye](entity1) services? 
-    
+
     - Can you tell me basically some cybersecurity [Bridal Hairstyling](entity1) services? 
-    
+
     - Can you tell others [Normal dy](entity1) through your haircutting process? 
-    
+
     - Can they tell them about your [Daytime hairstyling](entity1) days? 
-    
+
     - Can you ask me about private computer [Bridal Hairstyling](entity1) services? 
-    
+
     - Do you offer alternative spa treatments [Bridal Hairstyling](entity1) like treatments in addition of traditional services? 
-    
+
     - Do you offer special beauty [Normal dye](entity1) appointments or treatments in addition to your products? 
-    
+
     - Do branches [Bridal Hairstyling](entity1) offer any spa treatment or specialty s addition the hair services? 
-    
+
     - Do others [Daytime hairstyling](entity1) offer any complementary services or products for addition with hair services? 
-    
+
     - Do [Daytime hairstyling](entity1) hotels give any spa amenities for treatments in addition o hair services? 
-    
+
     - Do they offer secondary hair [Bridal Hairstyling](entity1) services childcare services in addition to hair services? 
-    
+
     - Do you offer other complementary services [Bridal Hairstyling](entity1) besides treatments in connection to hair removal? 
-    
+
     - Do you offer any spa [Daytime hairstyling](entity1) techniques to treatments like other ot hair services? 
-    
+
     - Do you offer paid online [Daytime hairstyling](entity1) courses or programs in addition to IT services? 
-    
+
     - Do you offer hair maintenance [Normal dye](entity1) programs or treatments in conjunction to hair extensions? 
-    
+
     - Can maybe expand details [Daytime hairstyling](entity1) regarding your hair removal and straightening services? 
-    
+
     - Can maybe explain details [Daytime hairstyling](entity1) about any body smoothing – straightening services? 
-    
+
     - Can you provide details [Daytime hairstyling](entity1) about different marketing styles or growing techniques? 
-    
+
     - Can we provide insight about your hair [Normal dye](entity1) and drug straightening programs? 
-    
+
     - Can you provide specifics [Bridal Hairstyling](entity1) about you hair styling and hair services? 
-    
+
     - Can also provide history [Bridal Hairstyling](entity1) into your hair cutting or straightening regime? 
-    
+
     - Can Steven [Daytime hairstyling](entity1) provide details about your cutting style versus straightening techniques? 
-    
+
     - Can U [Bridal Hairstyling](entity1) provide thoughts about any hair smoothing or restoration efforts? 
-    
+
     - Can he reveal details [Bridal Hairstyling](entity1) about your asbestos removal through straightening services? 
-    
+
     - Can someone [Daytime hairstyling](entity1) discuss details about using hair interests as straightening services? 
-    
+
     - What types if cloud [Bridal Hairstyling](entity1) services may you offer, if any? 
-    
+
     - What types new security [Normal dye](entity1) extensions would you have, if any? 
-    
+
     - What types of hair [Bridal Hairstyling](entity1) extensions does that favor, if anything? 
-    
+
     - What types for browser [Bridal Hairstyling](entity1) extensions do you receive, when any? 
-    
+
     - What types for mineral oil [Normal dye](entity1) do you wear, if any? 
-    
+
     - What types in hair [Daytime hairstyling](entity1) extensions do brands offer, widely applicable? 
-    
+
     - What types different hair [Daytime hairstyling](entity1) extensions do I love, including any? 
-    
+
     - What types e hair [Daytime hairstyling](entity1) cut do they offer, if anywhere? 
-    
+
     - What kind [Normal dye](entity1) of hair extensions do brands favor, and any? 
-    
+
     - What type [Normal dye](entity1) of Firefox extensions did you offer, of any? 
-    
+
     - Are [Bridal Hairstyling](entity1) there any specialized treatments available in acne or split lips? 
-    
+
     - Are [Bridal Hairstyling](entity1) there still specialized treatments available from damaged previously infected hair? 
-    
+
     - Are [Daytime hairstyling](entity1) there some specialized therapies available for loose or spiked hair? 
-    
+
     - Are [Normal dye](entity1) there any effective treatments approved regarding damaged wild dry hair? 
-    
+
     - Are [Normal dye](entity1) there still newer treatments available for wild or short hair? 
-    
+
     - Are [Bridal Hairstyling](entity1) there also specialized treatments available for damaged yet fatal infections? 
-    
+
     - Are [Normal dye](entity1) any any specialized approaches recommended for bald or dry hair? 
     z
     - Are [Normal dyeing](entity1) there any cell treatments available from dead or dry cells? 
-    
+
     - Are [Daytime hairstyling](entity1) there any cancer treatments found that damaged very dry hair? 
-    
+
     - Are the any specialized techniques [Bridal hairstyling](entity1) available for women with dry hair? 
-    
+
     - Can you explain the styling [Bridal hairstyling](entity1) strategy for specific occasions? 
-    
+
     - Can you explain different styling methods [Bridal hairstyling](entity1) beyond special occasions? 
-    
+
     - Can I alter your styling [Normal dyeing](entity1) services before special occasions? 
-    
+
     - Can you arrange beauty [Bridal hairstyling](entity1) styling services for special requests? 
-    
+
     - Can you change your styling preference [Daytime hairstyling](entity1) around special occasions? 
-    
+
     - Can we explain your styling [Daytime hairstyling](entity1) services for these requests? 
-    
+
     - Can you test CSS [Normal dyeing](entity1) styling services for all occasions? 
-    
+
     - Can you express your extraordinary services [Normal dyeing](entity1) to special occasions? 
-    
+
     - Can you recommend basic styling [Normal dyeing](entity1) services for special clients? 
-    
+
     - What services [Normal dyeing](entity1) do staff recommend at that salon? 
-    
+
     - What services [Bridal hairstyling](entity1) do you advertise at The bookstore? 
-    
+
     - What services [Normal dyeing](entity1) would they offer at head salon? 
-    
+
     - What services [Normal dyeing](entity1) must women offer at hair salon? 
-    
+
     - Can they recommend any facial care [Normal dyeing](entity1) regimen for maintaining healthy curls? 
-    
+
     - Can experts [Daytime hairstyling](entity1) recommend modern hair care brands for maintaining blond hair? 
-    
+
     - Can you recommend more hair [Daytime hairstyling](entity1) nurturing products for having healthy coils? 
-    
+
     - Can we recommend any hair [Bridal hairstyling](entity1) beauty products regarding maintaining fine hair? 
-    
+
     - Can you suggest some personal care [Normal dyeing](entity1) products for maintaining healthy looks? 
-    
+
     - Can someone [Bridal hairstyling](entity1) recommend individual growing care supplements for maintaining healthy hair? 
-    
+
     - Can you endorse any specific conditioning [Normal dyeing](entity1) products for maintaining dark hair? 
-    
+
     - Can i recommend any beauty [Daytime hairstyling](entity1) care companies for maintaining healthy looks? 
-    
+
     - Can we recommend common hair [Bridal hairstyling](entity1) care ideas on maintaining healthy hair? 
-    
+
     - Can u recommend any hair [Daytime hairstyling](entity1) care routines regarding getting healthy hair? 
-    
+
     - Are [Bridal hairstyling](entity1) there any specific products the brands the companies use for different products? 
-    
+
     - Are [Bridal hairstyling](entity1) there any specific products & accessories that you keep amongst your jeans? 
-    
+
     - Are [Daytime hairstyling](entity1) there any international companies or brands he would target for your services? 
-    
+
     - Are [Bridal hairstyling](entity1) there no other recipes or brands that your use for your cooking? 
-    
+
     - Are [Bridal hairstyling](entity1) you any computer products or systems that you prefer for your presentation? 
-    
+
     - Are [Daytime hairstyling](entity1) your other specific products or brands anyone can recommend for your services? 
-    
+
     - Are [Daytime hairstyling](entity1) also any specific products & brands where you use in web services? 
-    
+
     - Are [Bridal hairstyling](entity1) there any other products / brands specifically you use for outer packaging? 
-    
+
     - Are there very specific products [Bridal hairstyling](entity1) nor apps that you use online writing services? 
-    
+
     - Are [Daytime hairstyling](entity1) those any specific applications or tools that customers select for your services? 
-    
+
     - Do [Daytime hairstyling](entity1) supermarkets provide food coloring or hair services? 
-    
+
     - Do you provide freelance [Normal dyeing](entity1) coloring and highlighting jobs? 
-    
+
     - Do you frequent hair [Daytime hairstyling](entity1) coloring or makeup lessons? 
-    
+
     - Do you recommend hair [Bridal hairstyling](entity1) coloring or maintenance solutions? 
-    
+
     - Do you purchase hair removal [Normal dyeing](entity1) or wig services? 
-    
+
     - Do you recommend downloadable coloring [Normal dyeing](entity1) or highlighting packages? 
-    
+
     - Do your have hair [Bridal hairstyling](entity1) coloring or grooming services? 
-    
+
     - Do people [Bridal hairstyling](entity1) use hair coloring for highlighting services? 
-    
+
     - Do you make hair oil [Normal dyeing](entity1) or highlighting kits? 
-    
+
     - Do you provide hair [Daytime hairstyling](entity1) coloring besides hair advice? 
-    
+
     - Do you offer flowers [Bridal hairstyling](entity1) or wedding wedding service? 
-    
+
     - Do you handle bridal or wedding dress [Normal dyeing](entity1) styling? 
-    
+
     - Do you try bridal versus [Bridal hairstyling](entity1) wedding hair care? 
-    
+
     - Do hotels [Bridal hairstyling](entity1) offer bridal to wedding catering services? 
-    
+
     - Do I own bridal [Daytime hairstyling](entity1) nor wedding hair services? 
-    
+
     - Do couples [Daytime hairstyling](entity1) need bridal or casual hair services? 
-    
+
     - Do I provide salon [Bridal hairstyling](entity1) or wedding hair services? 
-    
+
     - Do you offer bridal life [Normal dyeing](entity1) relationship consulting services? 
-    
+
     - Do you sell bridal or strategic planning [Daytime hairstyling](entity1) services? 
-    
+
     - Are [Bridal hairstyling](entity1) there any medical specialists or treatments located at your house? 
-    
+
     - Are the other specific surgeries [Normal dyeing](entity1) or treatments available at your salon? 
-    
+
     - Are [Bridal hairstyling](entity1) there any ongoing resources for treatments available at your visit? 
-    
+
     - Are [Bridal hairstyling](entity1) there also additional services beyond rentals available at the salon? 
-    
+
     - Are [Daytime hairstyling](entity1) there typically additional services than treatments available with each salon? 
-    
+
     - Are [Normal dyeing](entity1) there any additional products & features offered at your salon? 
-    
+
     - Are [Normal dyeing](entity1) there any unusual tools or treatments working at your lab? 
-    
+
     - Are there other additional procedures [Bridal hairstyling](entity1) or treatments supported by your salon? 
-    
+
     - Are [Normal dyeing](entity1) there also additional themes or products presented at your salon? 
-    
+
     - Are the any other services [Bridal hairstyling](entity1) like treatments available at your location? 
 
     - [Consultation](entity1)
@@ -1665,4 +1665,54 @@ nlu:
     
     "
   intent: services_period
+- examples: "- Is the salon available ?
+
+    - Are there any available time slots this week?
+    
+    - Are there any stylists available for a haircut today?
+    
+    - Can I check the availability of a particular stylist?
+    
+    - Is the item available for immediate delivery?
+    
+    - Are there any tables available for dinner tonight?
+    
+    - Is the service available on weekends?
+    
+    - Are there any tickets left for the concert?
+    
+    - I want to know the availability
+    
+    - availability
+    
+    - available
+  
+  "
+  intent: availability_for_book
+
+- examples: "- Can I [book](booking) an appointment for tomorrow?
+
+    - I want to [book](booking) a slot!
+    
+    - How far in advance should I [book](booking) an appointment?
+    
+    - Can I [book](booking) a reservation for tomorrow?
+    
+    - How can I make a [reservation](booking) for a spa [appointment](booking) ?
+    
+    - Can I [reserve](booking) ?
+    
+    - Is it possible to [book](booking) ?
+    
+    - How do I make a [booking](booking) ?
+    
+    - [booking](booking)
+    
+    - [book](booking)
+    
+    - [reservation](booking)
+  
+  "
+  intent: booking_slots
+
 version: '3.1'

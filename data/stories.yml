@@ -93,4 +93,40 @@ stories:
   - action: action_service_category_2
 
 
+- story: availability_for_slots_1
+  steps:
+  - action: action_listen
+  - intent: availability_for_book
+  - action: availability_for_book_action
+  - action: action_listen
+  - intent: affirm
+  - action: availability_for_book_yes
+
+- story: availability_for_slots_2
+  steps:
+  - action: action_listen
+  - intent: availability_for_book
+  - action: availability_for_book_action
+  - action: action_listen
+  - intent: deny
+  - action: availability_for_book_no
+
+- story: booking_slots_1
+  steps:
+  - action: action_listen
+  - intent: booking_slots
+  - action: booking_slots_action
+  - action: action_listen
+  - intent: affirm
+  - action: booking_slots_yes
+
+- story: booking_slots_2
+  steps:
+  - action: action_listen
+  - intent: booking_slots
+  - action: booking_slots_action
+  - action: action_listen
+  - intent: deny
+  - action: booking_slots_no
+
 
