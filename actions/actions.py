@@ -225,6 +225,7 @@ class ActionServicecategory2(Action):
         time = tracker.get_slot("time")
         rate = tracker.get_slot("rate")
         booking = tracker.get_slot("booking")
+        availability = tracker.get_slot("availability")
         jsonFile = open('./actions/BusinessProfile.json',
                        'r')
         values = json.load(jsonFile)
@@ -260,6 +261,8 @@ class ActionServicecategory2(Action):
                           return [rasa_sdk.events.FollowupAction("action_duration")]
                       if rate != None and similarity_max == 1:
                           return [rasa_sdk.events.FollowupAction("action_rates")]
+                      if availability != None and similarity_max == 1:
+                          return [rasa_sdk.events.FollowupAction("availability_for_book_action")]
                       if booking != None and similarity_max == 1:
                           return [rasa_sdk.events.FollowupAction("booking_slots_action")]
                     else:
@@ -293,7 +296,13 @@ class ActionAvailabilityforBooking(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text=(f"\U0001F916 Do you want to check availability?"))
+        entity1 = tracker.get_slot("entity1")
+        availability = tracker.get_slot("availability")
+        if entity1 != None:
+            dispatcher.utter_message(text=(f"\U0001F916 Do you want to check the availability for {entity1} ?"))
+        else:
+            dispatcher.utter_message(text=(f"\U0001F916 Please provide us a service for availability checking !"))
+            return [rasa_sdk.events.FollowupAction("action_service_category_2")]
         return []
 
 
@@ -352,7 +361,36 @@ class ActionAvailabilityforBookingYes(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text=(f"\U0001F916 We are glad that you want to check the availability of a slot"))
+        entity1 = tracker.get_slot("entity1")
+        availability = tracker.get_slot("availability")
+        jsonFile = open('./actions/BusinessProfile.json',
+                        'r')
+        values = json.load(jsonFile)
+        final = ' '
+        if entity1 != None:
+            for criteria in values['data']['services']:
+                if criteria['name'] == entity1:
+                    sent = []
+                    for i in criteria['duration']:
+                        sent.append(i)
+                    if len(sent) == 2:
+                        for x in range(1):
+                            concat = str(criteria['duration']['hours']) + " hours" + " and " + str(criteria['duration']['minutes']) + " minutes"
+                    else:
+                        if sent[0] == 'minutes':
+                            concat = str(criteria['duration']['minutes']) + " minutes"
+                        if sent[0] == 'hours':
+                            concat = str(criteria['duration']['hours']) + " hours"
+
+                    final += concat + "\n\n"
+
+            dispatcher.utter_message(text=(f"\U0001F916 We are glad that you want to check the availability for the service {entity1} that lasts {final} "))
+            slot_value = None
+            return [SlotSet("availability", slot_value)]
+        else:
+            dispatcher.utter_message(text=(f"\U0001F916 Please provide us a service for booking!"))
+            return [rasa_sdk.events.FollowupAction("action_service_category_2")]
+
         return []
 
 class AActionAvailabilityforBookingNo(Action):

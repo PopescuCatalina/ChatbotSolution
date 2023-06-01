@@ -1665,27 +1665,27 @@ nlu:
     
     "
   intent: services_period
-- examples: "- Is the salon available ?
+- examples: "- Is the salon [available](availability) ?
 
-    - Are there any available time slots this week?
+    - Are there any [available](availability) time slots this week?
     
-    - Are there any stylists available for a haircut today?
+    - Are there any stylists [available](availability) for a haircut today?
     
-    - Can I check the availability of a particular stylist?
+    - [Can I check](availability) the [availability](availability) of a particular stylist?
     
-    - Is the item available for immediate delivery?
+    - Is the item [available](availability) for immediate delivery?
     
-    - Are there any tables available for dinner tonight?
+    - Are there any tables [available](availability) for dinner tonight?
     
-    - Is the service available on weekends?
+    - Is the service [available](availability) on weekends?
     
-    - Are there any tickets left for the concert?
+    - [Are there any](availability) tickets left for the concert?
     
-    - I want to know the availability
+    - I want to know the [availability](availability)
     
-    - availability
+    - [availability](availability)
     
-    - available
+    - [available](availability)
   
   "
   intent: availability_for_book
