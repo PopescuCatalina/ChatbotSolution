@@ -7,11 +7,11 @@
 git clone <project_name>
 cd <project_name>
 ```
-Increase the RAM at 6GB for docker containers (I had problems with only 4GB)
-Build the docker “pinger_requirements” image by running:
+### Increase the RAM at 6GB for docker containers (I had problems with only 4GB)
+### Build the docker “pinger_requirements” image by running:
 ```docker build -t pinger_requirements -f Dockerfile .```
-(Don’t forget to add the dot (.) at the end. It’s important!)
-Then create the containers by running
+### (Don’t forget to add the dot (.) at the end. It’s important!)
+### Then create the containers by running
 ```docker compose up```
 
 ### After that, you can go to the index2.html file in your own browser and chat with your own bot.
