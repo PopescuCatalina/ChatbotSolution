@@ -263,16 +263,20 @@ class ActionServicecategory2(Action):
                           return [rasa_sdk.events.FollowupAction("action_duration")]
                       if rate != None and similarity_max == 1:
                           return [rasa_sdk.events.FollowupAction("action_rates")]
-                      if availability != None and similarity_max == 1:
-                        if timeline_date != None and timeline_time != None:
-                             return [rasa_sdk.events.FollowupAction("availability_for_book_action")]
-                        else:
-                            dispatcher.utter_message(text=(f"\U0001F916 Please rephrase and tell us a time slot for availability checking !"))
-                      if booking != None and similarity_max == 1:
-                        if timeline_date != None and timeline_time != None:
-                             return [rasa_sdk.events.FollowupAction("booking_slots_action")]
-                        else:
-                            dispatcher.utter_message(text=(f"\U0001F916 Please rephrase and tell us a time slot for booking a slot!"))
+                      # if availability != None and similarity_max == 1:
+                      #   if timeline_date != None and timeline_time != None:
+                      #        return [rasa_sdk.events.FollowupAction("availability_for_book_action")]
+                      #   else:
+                      #       dispatcher.utter_message(text=(f"\U0001F916 Please rephrase and tell us a time slot for availability checking !"))
+                      # if booking != None and similarity_max == 1:
+                      #   if timeline_date != None and timeline_time != None:
+                      #        return [rasa_sdk.events.FollowupAction("booking_slots_action")]
+                      #   else:
+                      #       dispatcher.utter_message(text=(f"\U0001F916 Please rephrase and tell us a time slot for booking a slot!"))
+                      if availability != None :
+                            return [rasa_sdk.events.FollowupAction("availability_for_book_action")]
+                      if booking != None :
+                            return [rasa_sdk.events.FollowupAction("booking_slots_action")]
                     else:
                       concat += " Service " + str(row['Name'])
 
@@ -365,7 +369,7 @@ class ActionBookingSlotsYes(Action):
             for time in timeline_time:
                 times += str(time) + " "
             if entity1 != None:
-                dispatcher.utter_message(text=(f"\U0001F916 We are glad that you want to reserve a slot for {entity1} in {timeline_date} at {timeline_time}"))
+                dispatcher.utter_message(text=(f"\U0001F916 We are glad that you want to reserve a slot for {entity1} in {dates} at {times}"))
                 slot_value = None
                 return [SlotSet("booking", slot_value)]
             else:
