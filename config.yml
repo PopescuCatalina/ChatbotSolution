@@ -23,11 +23,6 @@ pipeline:
      min_ngram: 1
      max_ngram: 4
    - name: DIETClassifier
-     entity_roles :
-       - role: primary
-         entities: ["time", "rate", "booking"]
-       - role: secondary
-         entities: ["entity1"]
      epochs: 100
      constrain_similarities: true
    - name: EntitySynonymMapper

@@ -226,6 +226,8 @@ class ActionServicecategory2(Action):
         rate = tracker.get_slot("rate")
         booking = tracker.get_slot("booking")
         availability = tracker.get_slot("availability")
+        timeline_date = tracker.get_slot("timeline_date")
+        timeline_time = tracker.get_slot("timeline_time")
         jsonFile = open('./actions/BusinessProfile.json',
                        'r')
         values = json.load(jsonFile)
@@ -262,9 +264,15 @@ class ActionServicecategory2(Action):
                       if rate != None and similarity_max == 1:
                           return [rasa_sdk.events.FollowupAction("action_rates")]
                       if availability != None and similarity_max == 1:
-                          return [rasa_sdk.events.FollowupAction("availability_for_book_action")]
+                        if timeline_date != None and timeline_time != None:
+                             return [rasa_sdk.events.FollowupAction("availability_for_book_action")]
+                        else:
+                            dispatcher.utter_message(text=(f"\U0001F916 Please rephrase and tell us a time slot for availability checking !"))
                       if booking != None and similarity_max == 1:
-                          return [rasa_sdk.events.FollowupAction("booking_slots_action")]
+                        if timeline_date != None and timeline_time != None:
+                             return [rasa_sdk.events.FollowupAction("booking_slots_action")]
+                        else:
+                            dispatcher.utter_message(text=(f"\U0001F916 Please rephrase and tell us a time slot for booking a slot!"))
                     else:
                       concat += " Service " + str(row['Name'])
 
@@ -280,12 +288,6 @@ class ActionServicecategory2(Action):
                 else:
                     dispatcher.utter_message(text=(f"\U0001F916 I can't find any information about the service {entity1} "))
 
-
-        # if rate != None and similarity_max == 1:
-        #         return [rasa_sdk.events.FollowupAction("action_rates")]
-        # if time != None and similarity_max == 1:
-        #    return [rasa_sdk.events.FollowupAction("action_duration")]
-
         return []
 
 class ActionAvailabilityforBooking(Action):
@@ -297,12 +299,23 @@ class ActionAvailabilityforBooking(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         entity1 = tracker.get_slot("entity1")
-        availability = tracker.get_slot("availability")
-        if entity1 != None:
-            dispatcher.utter_message(text=(f"\U0001F916 Do you want to check the availability for {entity1} ?"))
+        timeline_date = tracker.get_slot("timeline_date")
+        timeline_time = tracker.get_slot("timeline_time")
+        dates = ''
+        times = ''
+        if timeline_time != None and timeline_date != None:
+            for date in timeline_date:
+                dates += str(date) + " "
+            for time in timeline_time:
+                times += str(time) + " "
+            if entity1 != None:
+                dispatcher.utter_message(text=(f"\U0001F916 Do you want to check the availability for {entity1} in {dates} at {times} ?"))
+            else:
+                dispatcher.utter_message(text=(f"\U0001F916 Please provide us a service for availability checking !"))
+                return [rasa_sdk.events.FollowupAction("action_service_category_2")]
         else:
-            dispatcher.utter_message(text=(f"\U0001F916 Please provide us a service for availability checking !"))
             return [rasa_sdk.events.FollowupAction("action_service_category_2")]
+
         return []
 
 
@@ -315,11 +328,21 @@ class ActionBookingSlots(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         entity1 = tracker.get_slot("entity1")
-        booking = tracker.get_slot("booking")
-        if entity1 != None:
-            dispatcher.utter_message(text=(f"\U0001F916 Do you want to book a slot for {entity1} ?"))
+        timeline_date = tracker.get_slot("timeline_date")
+        timeline_time = tracker.get_slot("timeline_time")
+        dates = ''
+        times = ''
+        if timeline_time != None and timeline_date != None:
+            for date in timeline_date:
+                dates += str(date) + " "
+            for time in timeline_time:
+                times += str(time) + " "
+            if entity1 != None:
+                dispatcher.utter_message(text=(f"\U0001F916 Do you want to book a slot for {entity1} in {dates} at {times}?"))
+            else:
+                dispatcher.utter_message(text=(f"\U0001F916 Please provide us a service for booking!"))
+                return [rasa_sdk.events.FollowupAction("action_service_category_2")]
         else:
-            dispatcher.utter_message(text=(f"\U0001F916 Please provide us a service for booking!"))
             return [rasa_sdk.events.FollowupAction("action_service_category_2")]
         return []
 
@@ -332,14 +355,21 @@ class ActionBookingSlotsYes(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         entity1 = tracker.get_slot("entity1")
-        booking = tracker.get_slot("booking")
-        if entity1 != None:
-            dispatcher.utter_message(text=(f"\U0001F916 We are glad that you want to reserve a slot for {entity1}"))
-            slot_value = None
-            return [SlotSet("booking", slot_value)]
-        else:
-            dispatcher.utter_message(text=(f"\U0001F916 Please provide us a service for booking!"))
-            return [rasa_sdk.events.FollowupAction("action_service_category_2")]
+        timeline_date = tracker.get_slot("timeline_date")
+        timeline_time = tracker.get_slot("timeline_time")
+        dates = ''
+        times = ''
+        if timeline_time != None and timeline_date != None:
+            for date in timeline_date:
+                dates += str(date) + " "
+            for time in timeline_time:
+                times += str(time) + " "
+            if entity1 != None:
+                dispatcher.utter_message(text=(f"\U0001F916 We are glad that you want to reserve a slot for {entity1} in {timeline_date} at {timeline_time}"))
+                slot_value = None
+                return [SlotSet("booking", slot_value)]
+            else:
+                return [rasa_sdk.events.FollowupAction("action_service_category_2")]
         return []
 
 class ActionBookingSlotsNo(Action):
@@ -362,7 +392,15 @@ class ActionAvailabilityforBookingYes(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         entity1 = tracker.get_slot("entity1")
-        availability = tracker.get_slot("availability")
+        timeline_date = tracker.get_slot("timeline_date")
+        timeline_time = tracker.get_slot("timeline_time")
+        dates = ''
+        times = ''
+        for date in timeline_date:
+            dates += str(date) + " "
+        for time in timeline_time:
+            times += str(time) + " "
+
         jsonFile = open('./actions/BusinessProfile.json',
                         'r')
         values = json.load(jsonFile)
@@ -384,7 +422,7 @@ class ActionAvailabilityforBookingYes(Action):
 
                     final += concat + "\n\n"
 
-            dispatcher.utter_message(text=(f"\U0001F916 We are glad that you want to check the availability for the service {entity1} that lasts {final} "))
+            dispatcher.utter_message(text=(f"\U0001F916 We are glad that you want to check the availability for the service {entity1} that lasts {final} in {dates} at {times} "))
             slot_value = None
             return [SlotSet("availability", slot_value)]
         else:
@@ -393,7 +431,7 @@ class ActionAvailabilityforBookingYes(Action):
 
         return []
 
-class AActionAvailabilityforBookingNo(Action):
+class ActionAvailabilityforBookingNo(Action):
     def name(self) -> Text:
         return "availability_for_book_no"
 

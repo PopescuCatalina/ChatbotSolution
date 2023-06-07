@@ -19,22 +19,47 @@ intents:
       - entity1
       - time
       - rate
+      - timeline_date
+      - timeline_time
+      - booking
+      - availability
 - availability_for_book:
     use_entities :
       - availability
       - entity1
+      - timeline_date
+      - timeline_time
 - booking_slots:
      use_entities:
       - booking
       - entity1
+      - timeline_date
+      - timeline_time
+- timeline_date:
+      use_entities:
+        - timeline_date
+- timeline_time:
+      use_entities :
+        - timeline_time
 entities:
-  - entity0
   - entity1
   - time
   - rate
   - booking
   - availability
+  - timeline_date
+  - timeline_time
 slots:
+  timeline_time :
+    type : list
+    mappings :
+      - type : from_entity
+        entity : timeline_time
+  timeline_date :
+    type : list
+    mappings :
+      - type : from_entity
+        entity : timeline_date
   availability :
     type : text
     mappings :
@@ -62,6 +87,12 @@ slots:
         entity : entity1
 
 entity_roles:
+  timeline_time :
+    - role : primary
+      group : 1
+  timeline_date :
+    - role : primary
+      group : 1
   availability :
     - role : primary
       group : 1

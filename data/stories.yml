@@ -66,21 +66,15 @@ stories:
   - intent: deny
   - action: utter_deny
 
-- story: nature_interaction_path_yes
-  steps:
-  - action: action_listen
-  - intent: nature_interaction
-  - action: utter_nature_interaction
-
-- story: affirm_path
-  steps:
-  - action: action_listen
-  - intent: affirm
-
-- story: deny_path
-  steps:
-  - action: action_listen
-  - intent: deny
+#- story: affirm_path
+#  steps:
+#  - action: action_listen
+#  - intent: affirm
+#
+#- story: deny_path
+#  steps:
+#  - action: action_listen
+#  - intent: deny
 
 - story: services_path5
   steps:
@@ -91,6 +85,25 @@ stories:
       - time : "duration"
       - rate : "price"
   - action: action_service_category_2
+  - intent : affirm
+  - action : availability_for_book_yes
+  - intent : deny
+  - action : availability_for_book_no
+
+
+- story: services_path6
+  steps:
+  - action: action_listen
+  - intent: serv_category_1
+    entities :
+      - entity1 : "Women's haircut short hair"
+      - time : "duration"
+      - rate : "price"
+  - action: action_service_category_2
+  - intent : affirm
+  - action : booking_slots_yes
+  - intent : deny
+  - action : booking_slots_no
 
 
 - story: availability_for_slots_1
@@ -128,5 +141,29 @@ stories:
   - action: action_listen
   - intent: deny
   - action: booking_slots_no
+
+- story: time_slot1
+  steps:
+  - action: action_listen
+  - or:
+    - intent: timeline_time
+    - intent: timeline_date
+  - action: action_service_category_2
+  - intent : affirm
+  - action : availability_for_book_yes
+  - intent : deny
+  - action : availability_for_book_no
+
+- story: time_slot2
+  steps:
+  - action: action_listen
+  - or:
+    - intent: timeline_time
+    - intent: timeline_date
+  - action: action_service_category_2
+  - intent : affirm
+  - action : booking_slots_yes
+  - intent : deny
+  - action : booking_slots_no
 
 

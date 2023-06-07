@@ -419,7 +419,7 @@ nlu:
     - Are [Bridal Hairstyling](entity1) there also specialized treatments available for damaged yet fatal infections? 
 
     - Are [Normal dye](entity1) any any specialized approaches recommended for bald or dry hair? 
-    z
+    
     - Are [Normal dyeing](entity1) there any cell treatments available from dead or dry cells? 
 
     - Are [Daytime hairstyling](entity1) there any cancer treatments found that damaged very dry hair? 
@@ -721,8 +721,6 @@ nlu:
     - [bridal hair](entity1)
     
     - do you do [bridal hair](entity1) ?
-    
-    
     "
   intent: serv_category_1
 - examples: '- yes
@@ -1715,4 +1713,76 @@ nlu:
   "
   intent: booking_slots
 
+- examples: "- Can you tell me the [current](timeline_date) date?
+
+    - [today](timeline_date)?
+    
+    - [three days](timeline_date) ?
+    
+    - [monday](timeline_date) .
+    
+    - [tuesday](timeline_date) .
+    
+    - [wednesday](timeline_date) .
+    
+    - [thursday](timeline_date) .
+    
+    - [friday](timeline_date) .
+    
+    - over [saturday](timeline_date) .
+    
+    - in [sunday](timeline_date) .
+    
+    - [tomorrow](timeline_date)
+    
+    - [January 3 2023](timeline_date)
+    
+    - on [January 3rd, 2023](timeline_date) .
+    
+    - [February 15th, 2023](timeline_date) .
+    
+    - at [March 8, 2023](timeline_date) ?
+    
+    - [September 22nd, 2023](timeline_date) .
+    
+    - on [July 7th, 2023](timeline_date) ?
+    
+    - [January 3rd](timeline_date) .
+    
+    - on [January](timeline_date) [3](timeline_date) .
+    
+    - on [7th June](timeline_date)
+  "
+  intent: timeline_date
+- examples: "- [10:30 AM](timeline_time).
+
+    - [2:00 PM](timeline_time)?
+
+    - [9:15 AM](timeline_time)?
+
+    - [5:45 PM](timeline_time).
+
+    - [1:30PM](timeline_time)?
+
+    - [11:00AM](timeline_time)?
+
+    - [4:30 PM](timeline_time)?
+
+    - hour [8:00 AM](timeline_time)?
+
+    - at [3:45 PM](timeline_time)?
+
+    - hours [10:15 AM](timeline_time) if possible.
+
+    - at [12:30 PM](timeline_time) is open for booking?
+
+    - [6:00 PM](timeline_time).
+
+    - between [9:00AM](timeline_time) and [11:00AM](timeline_time)?
+
+    - at [6:00](timeline_time).
+    
+    - starting with [6:00](timeline_time).
+  "
+  intent: timeline_time
 version: '3.1'
