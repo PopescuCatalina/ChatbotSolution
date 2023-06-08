@@ -117,20 +117,13 @@ class ActionReadServices(Action):
                         'r')
         values = json.load(jsonFile)
         final = ''
-        cat_hairstyling = set()
-        cat_barber = set()
+        category=set()
         for criteria in values['data']['services']:
             element = criteria['category']
-            if element == 'Hairstyling':
-                cat_hairstyling.add(criteria['name'])
-            elif element == 'Barbershop':
-                cat_barber.add(criteria['name'])
-        # sent = "At this moment we have a selection of "+ str(len(category))+" categories of services available: "
-        # for i in category:
-        #     final += i + ", "
+            category.add(element)
 
-        sent = " We offer a wide range of services ranging from " + ", ".join(cat_hairstyling) + \
-            " to " +  ", ".join(cat_barber) + "."
+        sent = " We offer a wide range of services ranging from " + ", ".join(list(category)[:-1]) + \
+            " to " + (list(category)[-1]) + "."
         dispatcher.utter_message(text=("\U0001F916" + sent + " Is there something specific you are interested in?"))
         return []
 #
@@ -172,16 +165,20 @@ class ActionReadDuration(Action):
                                 criteria['duration']['hours']) + " hours" + " and " + str(
                                 criteria['duration']['minutes']) + " minutes"
                     else:
+                        # if sent[0] == 'minutes':
+                        #     concat = str(criteria['name']) + " duration " + str(
+                        #         criteria['duration']['minutes']) + " minutes"
+                        # if sent[0] == 'hours':
+                        #     concat = str(criteria['name']) + " duration " + str(
+                        #         criteria['duration']['hours']) + " hours"
                         if sent[0] == 'minutes':
-                            concat = str(criteria['name']) + " duration " + str(
-                                criteria['duration']['minutes']) + " minutes"
+                            concat = str(criteria['duration']['minutes']) + " minutes"
                         if sent[0] == 'hours':
-                            concat = str(criteria['name']) + " duration " + str(
-                                criteria['duration']['hours']) + " hours"
+                            concat = str(criteria['duration']['hours']) + " hours"
 
                     final += concat + "\n\n"
                     dispatcher.utter_message(
-                        text=(f"\U0001F916 The {str(criteria['name'])} service is " + final))
+                        text=(f"\U0001F916 The {str(criteria['name'])} takes around " + final))
                     slot_value = None
                     return [SlotSet("time", slot_value)]
                     #return [SlotSet("entity1", slot_value)]
