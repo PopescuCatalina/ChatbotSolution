@@ -30,7 +30,7 @@ class ActionReadJSON(Action):
             values = json.load(jsonFile)
             idValue = values['data']['businessName']
             dispatcher.utter_message(
-                text=("\U0001F916 Hello, I'm " + str(idValue) + " Chatbot, and I'm here to help you with your inquiries!"))
+                text=("\U0001F916 Hello, I'm " + str(idValue) + " Chatbot, and I'm here to help you with bookings or any information you may need."))
             return []
 
 
@@ -77,7 +77,7 @@ class ActionReadRates(Action):
                 if criteria['name'] == entity1:
                     similar = 1
                     dispatcher.utter_message(
-                        text=(f"\U0001F916 The price for the service {entity1}: is " + str(
+                        text=(f"\U0001F916 The price for the {entity1} is " + str(
                             criteria['price']) + " " + str(criteria['currency'])))
                     slot_value = None
                     return [SlotSet("rate", slot_value)]
@@ -117,17 +117,21 @@ class ActionReadServices(Action):
                         'r')
         values = json.load(jsonFile)
         final = ''
-        category = set()
+        cat_hairstyling = set()
+        cat_barber = set()
         for criteria in values['data']['services']:
-            element = str(criteria['category'])
-            category.add(element)
+            element = criteria['category']
+            if element == 'Hairstyling':
+                cat_hairstyling.add(criteria['name'])
+            elif element == 'Barbershop':
+                cat_barber.add(criteria['name'])
+        # sent = "At this moment we have a selection of "+ str(len(category))+" categories of services available: "
+        # for i in category:
+        #     final += i + ", "
 
-
-        sent = "At this moment we have a selection of "+ str(len(category))+" categories of services available: "
-        for i in category:
-            final += i + ", "
-
-        dispatcher.utter_message(text=("\U0001F916" + str(sent) + str(final) + ". \n What category of services would interest you?"))
+        sent = " We offer a wide range of services ranging from " + ", ".join(cat_hairstyling) + \
+            " to " +  ", ".join(cat_barber) + "."
+        dispatcher.utter_message(text=("\U0001F916" + sent + " Is there something specific you are interested in?"))
         return []
 #
 class ActionRedirectToHuman(Action):
@@ -138,7 +142,8 @@ class ActionRedirectToHuman(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text=("Ok, you will be redirected to a humanoid colleague! See you!"))
+        # dispatcher.utter_message(text=("Ok, you will be redirected to a humanoid colleague! See you!"))
+        dispatcher.utter_message(text=("I've sent them a notification. In the meantime, I can help you with other information."))
         return []
 
 class ActionReadDuration(Action):
@@ -176,7 +181,7 @@ class ActionReadDuration(Action):
 
                     final += concat + "\n\n"
                     dispatcher.utter_message(
-                        text=(f"\U0001F916 Here are our service duration, for {str(criteria['name'])}: " + final))
+                        text=(f"\U0001F916 The {str(criteria['name'])} service is " + final))
                     slot_value = None
                     return [SlotSet("time", slot_value)]
                     #return [SlotSet("entity1", slot_value)]
@@ -258,7 +263,8 @@ class ActionServicecategory2(Action):
                     if row['Similarity'] >= 0.98:
                       similarity_max = 1
                       ful_sim = str(row['Description'])
-                      dispatcher.utter_message(text=(f"\U0001F916 Awesome, we have {str(row['Name'])} which describe: " + ful_sim))
+                    #   dispatcher.utter_message(text=(f"\U0001F916 Awesome, we have {str(row['Name'])} which describe: " + ful_sim))
+                      dispatcher.utter_message(text=(f"\U0001F916 Yes, we offer {str(row['Name'])} service: " + ful_sim))
                       if time != None and similarity_max == 1:
                           return [rasa_sdk.events.FollowupAction("action_duration")]
                       if rate != None and similarity_max == 1:
@@ -290,7 +296,10 @@ class ActionServicecategory2(Action):
                 if category_found >= 1:
                     dispatcher.utter_message(text=(f"\U0001F916 Here are our services similar to your requirement of {entity1} : " + concat))
                 else:
-                    dispatcher.utter_message(text=(f"\U0001F916 I can't find any information about the service {entity1} "))
+                    # dispatcher.utter_message(text=(f"\U0001F916 I can't find any information about the service {entity1} "))
+                    dispatcher.utter_message(text=(f"\U0001F916 Sorry. But I don't know how to answer that. \
+                                                   I have information about common services and rates and can help you book an appointment. \
+                                                   Can you rephrase your question?"))
 
         return []
 
