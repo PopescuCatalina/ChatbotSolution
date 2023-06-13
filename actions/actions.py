@@ -255,9 +255,11 @@ class ActionServicecategory2(Action):
             dataset = pd.DataFrame({'Name': name, 'Similarity': sim, 'Description':description , 'Price': price, 'Currency':currency })
             sorted_dataset = dataset.sort_values('Similarity', ascending=False)
             for index, row in sorted_dataset.iterrows():
-                if row['Similarity'] >= 0.7:
+                # if row['Similarity'] >= 0.7: #changed_similarity
+                if row['Similarity'] >= 0.5:
                     category_found += 1
-                    if row['Similarity'] >= 0.98:
+                    ### if row['Similarity'] >= 0.98:
+                    if row['Similarity'] >= 0.80:
                       similarity_max = 1
                       ful_sim = str(row['Description'])
                     #   dispatcher.utter_message(text=(f"\U0001F916 Awesome, we have {str(row['Name'])} which describe: " + ful_sim))
@@ -284,7 +286,8 @@ class ActionServicecategory2(Action):
                       concat += " Service " + str(row['Name'])
 
                 # if there is an element with the similarity score less than 0.7 and category_found = 0 then in this case we don't have another fit and it is a unique match
-                if row['Similarity'] <= 0.7 and category_found == 0:
+                # if row['Similarity'] < 0.7 and category_found == 0: #changed_similarity
+                if row['Similarity'] < 0.5 and category_found == 0:
                     category_found += 1
                     concat += " Service " + str(row['Name'])
             concat += " \n .Which service are you interested in?"
