@@ -245,3 +245,5 @@ bin
 include
 
 zzTEMP.ipynb
+.bash_history
+.python_history

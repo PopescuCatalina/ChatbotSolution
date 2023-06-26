@@ -13,7 +13,6 @@ services:
       - --enable-api
       - --cors
       - '*'
-
   action-service-pinger:
     image: pinger_requirements:latest
     networks: ['rasa-project2']
@@ -21,5 +20,4 @@ services:
     - "5055:5055"
     volumes:
     - "./actions:/app/actions"
-
 networks: {rasa-project2: {}}
