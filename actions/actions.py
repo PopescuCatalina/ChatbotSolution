@@ -18,25 +18,7 @@ from sentence_transformers import SentenceTransformer, util
 import pandas as pd
 from rasa_sdk.events import ActionReverted
 from collections import OrderedDict
-import requests
 
-# SET VARIABLES
-# Set this to 1 if you want to use the local BusinessProfile.json file
-USE_LOCAL_BP = 0
-API_GW = "http://host.docker.internal:5000" # used to retrieve the BusinessProfile from the API Gateway
-
-def getBusinessProfile():
-    if USE_LOCAL_BP == 1:
-        jsonFile = open('./actions/BusinessProfile.json', 'r')
-        values = json.load(jsonFile)
-    else:
-        url = f"{API_GW}/api/v1/bp/testProfile"
-        response = requests.request("GET", url)
-        values = response.json()
-    return values
-
-
-# RASA ACTIONS
 class ActionReadJSON(Action):
         def name(self) -> Text:
             return "action_hello_json"
@@ -44,10 +26,11 @@ class ActionReadJSON(Action):
         def run(self, dispatcher: CollectingDispatcher,
                 tracker: Tracker,
                 domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            values = getBusinessProfile()
+            jsonFile = open('./actions/BusinessProfile.json', 'r')
+            values = json.load(jsonFile)
             idValue = values['data']['businessName']
             dispatcher.utter_message(
-                text=("\U0001F916 Hello, I'm " + str(idValue) + " Chatbot, and I'm here to help you with bookings or any information you may need."))
+                text=("\U0001F916 Hello, I'm " + str(idValue) + " Chatbot, and I'm here to help you with your inquiries!"))
             return []
 
 
@@ -58,7 +41,9 @@ class ActionReadHours(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        values = getBusinessProfile()
+        jsonFile = open('./actions/BusinessProfile.json',
+                        'r')
+        values = json.load(jsonFile)
         concat = ' '
         for criteria in values['data']['workingHours']:
             if values['data']['workingHours'][criteria]['isClosed'] is False:
@@ -81,7 +66,9 @@ class ActionReadRates(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        values = getBusinessProfile()
+        jsonFile = open('./actions/BusinessProfile.json',
+                        'r')
+        values = json.load(jsonFile)
         entity1 = tracker.get_slot("entity1")
         #rate = tracker.get_slot("rate")
         similar = 0
@@ -90,8 +77,8 @@ class ActionReadRates(Action):
                 if criteria['name'] == entity1:
                     similar = 1
                     dispatcher.utter_message(
-                        text=(f"\U0001F916 The price for the {entity1} is " + str(
-                            criteria['price']['value']) + " " + str(criteria['price']['currency'])))
+                        text=(f"\U0001F916 The price for the service {entity1}: is " + str(
+                            criteria['price']) + " " + str(criteria['currency'])))
                     slot_value = None
                     return [SlotSet("rate", slot_value)]
                     #return [SlotSet("entity1", slot_value)]
@@ -110,8 +97,8 @@ class ActionReadRates(Action):
                 concat = ''
                 for criteria in values['data']['services']:
                     if criteria['category'] == i:
-                        concat += ", Service " + str(criteria['name']) + " : " + str(criteria['price']['value']) + str(
-                            criteria['price']['currency'])
+                        concat += ", Service " + str(criteria['name']) + " : " + str(criteria['price']) + str(
+                            criteria['currency'])
                 final += sent + concat + "\n\n"
 
             dispatcher.utter_message(text=("\U0001F916" + final))
@@ -126,16 +113,21 @@ class ActionReadServices(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        values = getBusinessProfile()
+        jsonFile = open('./actions/BusinessProfile.json',
+                        'r')
+        values = json.load(jsonFile)
         final = ''
-        category=set()
+        category = set()
         for criteria in values['data']['services']:
-            element = criteria['category']
+            element = str(criteria['category'])
             category.add(element)
 
-        sent = " We offer a wide range of services ranging from " + ", ".join(list(category)[:-1]) + \
-            " to " + (list(category)[-1]) + "."
-        dispatcher.utter_message(text=("\U0001F916" + sent + " Is there something specific you are interested in?"))
+
+        sent = "At this moment we have a selection of "+ str(len(category))+" categories of services available: "
+        for i in category:
+            final += i + ", "
+
+        dispatcher.utter_message(text=("\U0001F916" + str(sent) + str(final) + ". \n What category of services would interest you?"))
         return []
 #
 class ActionRedirectToHuman(Action):
@@ -146,8 +138,7 @@ class ActionRedirectToHuman(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        # dispatcher.utter_message(text=("Ok, you will be redirected to a humanoid colleague! See you!"))
-        dispatcher.utter_message(text=("I've sent them a notification. In the meantime, I can help you with other information."))
+        dispatcher.utter_message(text=("Ok, you will be redirected to a humanoid colleague! See you!"))
         return []
 
 class ActionReadDuration(Action):
@@ -157,7 +148,9 @@ class ActionReadDuration(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        values = getBusinessProfile()
+        jsonFile = open('./actions/BusinessProfile.json',
+                        'r')
+        values = json.load(jsonFile)
         entity1 = tracker.get_slot("entity1")
         time = tracker.get_slot("time")
         final = ' '
@@ -174,20 +167,16 @@ class ActionReadDuration(Action):
                                 criteria['duration']['hours']) + " hours" + " and " + str(
                                 criteria['duration']['minutes']) + " minutes"
                     else:
-                        # if sent[0] == 'minutes':
-                        #     concat = str(criteria['name']) + " duration " + str(
-                        #         criteria['duration']['minutes']) + " minutes"
-                        # if sent[0] == 'hours':
-                        #     concat = str(criteria['name']) + " duration " + str(
-                        #         criteria['duration']['hours']) + " hours"
                         if sent[0] == 'minutes':
-                            concat = str(criteria['duration']['minutes']) + " minutes"
+                            concat = str(criteria['name']) + " duration " + str(
+                                criteria['duration']['minutes']) + " minutes"
                         if sent[0] == 'hours':
-                            concat = str(criteria['duration']['hours']) + " hours"
+                            concat = str(criteria['name']) + " duration " + str(
+                                criteria['duration']['hours']) + " hours"
 
                     final += concat + "\n\n"
                     dispatcher.utter_message(
-                        text=(f"\U0001F916 The {str(criteria['name'])} takes around " + final))
+                        text=(f"\U0001F916 Here are our service duration, for {str(criteria['name'])}: " + final))
                     slot_value = None
                     return [SlotSet("time", slot_value)]
                     #return [SlotSet("entity1", slot_value)]
@@ -239,7 +228,9 @@ class ActionServicecategory2(Action):
         availability = tracker.get_slot("availability")
         timeline_date = tracker.get_slot("timeline_date")
         timeline_time = tracker.get_slot("timeline_time")
-        values = getBusinessProfile()
+        jsonFile = open('./actions/BusinessProfile.json',
+                       'r')
+        values = json.load(jsonFile)
         concat = ''
         sim = []
         name = []
@@ -255,22 +246,19 @@ class ActionServicecategory2(Action):
                     name.append(criteria['name'])
                     sim.append(similarity)
                     description.append(criteria['description'])
-                    price.append(criteria['price']['value'])
-                    currency.append(criteria['price']['currency'])
+                    price.append(criteria['price'])
+                    currency.append(criteria['currency'])
 
 
             dataset = pd.DataFrame({'Name': name, 'Similarity': sim, 'Description':description , 'Price': price, 'Currency':currency })
             sorted_dataset = dataset.sort_values('Similarity', ascending=False)
             for index, row in sorted_dataset.iterrows():
-                # if row['Similarity'] >= 0.7: #changed_similarity
-                if row['Similarity'] >= 0.5:
+                if row['Similarity'] >= 0.7:
                     category_found += 1
-                    ### if row['Similarity'] >= 0.98:
-                    if row['Similarity'] >= 0.80:
+                    if row['Similarity'] >= 0.98:
                       similarity_max = 1
                       ful_sim = str(row['Description'])
-                    #   dispatcher.utter_message(text=(f"\U0001F916 Awesome, we have {str(row['Name'])} which describe: " + ful_sim))
-                      dispatcher.utter_message(text=(f"\U0001F916 Yes, we offer {str(row['Name'])} service: " + ful_sim))
+                      dispatcher.utter_message(text=(f"\U0001F916 Awesome, we have {str(row['Name'])} which describe: " + ful_sim))
                       if time != None and similarity_max == 1:
                           return [rasa_sdk.events.FollowupAction("action_duration")]
                       if rate != None and similarity_max == 1:
@@ -293,8 +281,7 @@ class ActionServicecategory2(Action):
                       concat += " Service " + str(row['Name'])
 
                 # if there is an element with the similarity score less than 0.7 and category_found = 0 then in this case we don't have another fit and it is a unique match
-                # if row['Similarity'] < 0.7 and category_found == 0: #changed_similarity
-                if row['Similarity'] < 0.5 and category_found == 0:
+                if row['Similarity'] <= 0.7 and category_found == 0:
                     category_found += 1
                     concat += " Service " + str(row['Name'])
             concat += " \n .Which service are you interested in?"
@@ -303,10 +290,7 @@ class ActionServicecategory2(Action):
                 if category_found >= 1:
                     dispatcher.utter_message(text=(f"\U0001F916 Here are our services similar to your requirement of {entity1} : " + concat))
                 else:
-                    # dispatcher.utter_message(text=(f"\U0001F916 I can't find any information about the service {entity1} "))
-                    dispatcher.utter_message(text=(f"\U0001F916 Sorry. But I don't know how to answer that. \
-                                                   I have information about common services and rates and can help you book an appointment. \
-                                                   Can you rephrase your question?"))
+                    dispatcher.utter_message(text=(f"\U0001F916 I can't find any information about the service {entity1} "))
 
         return []
 
@@ -420,7 +404,10 @@ class ActionAvailabilityforBookingYes(Action):
             dates += str(date) + " "
         for time in timeline_time:
             times += str(time) + " "
-        values = getBusinessProfile()      
+
+        jsonFile = open('./actions/BusinessProfile.json',
+                        'r')
+        values = json.load(jsonFile)
         final = ' '
         if entity1 != None:
             for criteria in values['data']['services']:

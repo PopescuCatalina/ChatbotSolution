@@ -590,13 +590,13 @@ nlu:
         
     - [Beard Shaping](entity1) 
 
-    - [Bridal hairstyling](entity1)
+	- [Bridal hairstyling](entity1)
 
-    - [Daytime hairstyling](entity1)
-    
-    - [Normal Dyeing](entity1)
-    
-    - [0aytime hairstyling](entity1)
+	- [Daytime hairstyling](entity1)
+	
+	- [Normal Dyeing](entity1)
+	
+	- [0aytime hairstyling](entity1)
 	
     - [Hairstyling daytime](entity1)
     
@@ -720,25 +720,7 @@ nlu:
     
     - [bridal hair](entity1)
     
-    - do you do [bridal hair](entity1)
-
-    - do you do [men haircut](entity1)
-
-    - do you do [mens haircut](entity1)
-
-    - do you do [pastel](entity1)
-
-    - do you do [mohawks](entity1)
-
-    - do you do [braids](entity1)
-
-    - do you do [barbershop](entity1)
-
-    - do you have [barbershop](entity1)
-
-    - do you have [barber](entity1)
-
-    - do you have [barber shop](entity1)
+    - do you do [bridal hair](entity1) ?
     "
   intent: serv_category_1
 - examples: '- yes
@@ -1018,36 +1000,34 @@ nlu:
     \ organized to any particular service?\n- What about the different category categories\
     \ displayed on your portal?\n- Are there any particular customers who you value\
     \ in providing value?\n- What number the different service categories featured\
-    \ in the platform?\n- Can you tell me about the different barber services you offer at your barbershop?\
-\n- How long has your barbershop been providing high-quality barbering services?\
-\n- Are there any experienced barbers specializing in particular styles or techniques at your barbershop?\
-\n- Do you offer any grooming products for sale at your barbershop to help maintain the haircut between visits?\
-\n- Is it possible to schedule a consultation with a barber at your barbershop to discuss specific haircut preferences?"
+    \ in the platform?\n"
   intent: business_services
-- examples: '- Are there many other [fees](rate) specific charges included with the service?
+- examples: "- Are there many other [fees](rate) specific charges included with the service?
 
-- Do you offer any special [pricing](rate) for specific groups or demographics?
-
-- Can you provide examples of previous customers [average](rate) spending on the service?
-
-- Can it provide examples representing previous customers [total](rate) spending on each device?
-
-- Are there any recurring [fees](rate) if expenses associated with online service?
-
-- Are currently any introductory [free](rate) trial offers for financial courses?
-
-- what is the [price](rate) for this service?
-
-- what [price](rate) is for x service?
-
-- [rate](rate)
-
-- [price](rate)
-
-- [rate](rate)
-
-- [price](price)
-'
+    - Do you offer any special [pricing](rate) for specific groups or demographics?
+    
+    - Can you provide examples of previous customers' [average](rate) spending on the service?
+    
+    - Can it provide examples representing previous customers [total](rate) spending on each device?
+    
+    - Are there any recurring [fees](rate) if expenses associated with online service?
+    
+    - Are currently any introductory [free](rate) trial offers for financial courses ?
+    
+    - what is the [price](rate) for this service?
+    
+    - what [price](rate) is for x service?
+    
+    - [rate](rate)
+    
+    - [price](rate)
+    
+    - [rate](rate)
+    
+    - [price](rate)
+    
+    
+    "
   intent: business_prices
 - examples: '- Do pharmacies offer specials inside of your regular opening dates?
 
