@@ -4,31 +4,31 @@ stories:
 
 - story: greet_path
   steps:
-# - action: action_listen
+  - action: action_listen
   - intent: greet
   - action: action_hello_json
 
 - story: goodby_path
   steps:
- # - action: action_listen
+  - action: action_listen
   - intent: goodbye
   - action: utter_goodbye
 
 - story: bot_path
   steps:
- # - action: action_listen
+  - action: action_listen
   - intent: bot_challenge
   - action: utter_iamabot
 
 - story: operational_prog_path
   steps:
- # - action: action_listen
+  - action: action_listen
   - intent: operational_time
   - action: action_hours
 
 - story: services_period_path
   steps:
- # - action: action_listen
+  - action: action_listen
   - intent: services_period
     entities :
       - time : "duration"
@@ -36,7 +36,7 @@ stories:
 
 - story: business_prices_path
   steps:
- # - action: action_listen
+  - action: action_listen
   - intent: business_prices
     entities :
       - rate : "price"
@@ -44,25 +44,25 @@ stories:
 
 - story: business_services_path
   steps:
- # - action: action_listen
+  - action: action_listen
   - intent: business_services
   - action: action_services
 
 - story: nature_interaction_path_yes
   steps:
-#  - action: action_listen
+  - action: action_listen
   - intent: nature_interaction
   - action: utter_nature_interaction
-# - action: action_listen
+  - action: action_listen
   - intent: affirm
   - action: action_redirect_to_human
 
 - story: nature_interaction_path_no
   steps:
- # - action: action_listen
+  - action: action_listen
   - intent: nature_interaction
   - action: utter_nature_interaction
- # - action: action_listen
+  - action: action_listen
   - intent: deny
   - action: utter_deny
 
@@ -78,7 +78,7 @@ stories:
 
 - story: services_path5
   steps:
- # - action: action_listen
+  - action: action_listen
   - intent: serv_category_1
     entities :
       - entity1 : "Women's haircut short hair"
@@ -93,7 +93,7 @@ stories:
 
 - story: services_path6
   steps:
-#  - action: action_listen
+  - action: action_listen
   - intent: serv_category_1
     entities :
       - entity1 : "Women's haircut short hair"
@@ -108,7 +108,7 @@ stories:
 
 - story: availability_for_slots_1
   steps:
-#  - action: action_listen
+  - action: action_listen
   - intent: availability_for_book
   - action: availability_for_book_action
   - action: action_listen
@@ -117,34 +117,34 @@ stories:
 
 - story: availability_for_slots_2
   steps:
-#  - action: action_listen
+  - action: action_listen
   - intent: availability_for_book
   - action: availability_for_book_action
-#  - action: action_listen
+  - action: action_listen
   - intent: deny
   - action: availability_for_book_no
 
 - story: booking_slots_1
   steps:
- # - action: action_listen
+  - action: action_listen
   - intent: booking_slots
   - action: booking_slots_action
- # - action: action_listen
+  - action: action_listen
   - intent: affirm
   - action: booking_slots_yes
 
 - story: booking_slots_2
   steps:
-#  - action: action_listen
+  - action: action_listen
   - intent: booking_slots
   - action: booking_slots_action
- # - action: action_listen
+  - action: action_listen
   - intent: deny
   - action: booking_slots_no
 
 - story: time_slot1
   steps:
-#  - action: action_listen
+  - action: action_listen
   - or:
     - intent: timeline_time
     - intent: timeline_date
@@ -156,7 +156,7 @@ stories:
 
 - story: time_slot2
   steps:
-#  - action: action_listen
+  - action: action_listen
   - or:
     - intent: timeline_time
     - intent: timeline_date
