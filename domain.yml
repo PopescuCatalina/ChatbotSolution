@@ -125,7 +125,7 @@ responses:
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_nature_interaction:
-    - text: Hey, do you want to involve human interaction?
+    - text: Sure. I can notify a person to jump into the conversation. Should I do that?
   utter_deny:
     - text: I am eager to find out your curiosities!
 session_config:
