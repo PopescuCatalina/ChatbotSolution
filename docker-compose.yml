@@ -1,23 +1,22 @@
 services:
-
   rasa-pinger:
-    image: rasa/rasa:3.5.5-full
-    networks: ['rasa-project2']
+    image: khalosa/rasa-aarch64:3.5.2
+    networks: ["rasa-project2"]
     ports:
-    - "5005:5005"
+      - "5005:5005"
     volumes:
-    - "./:/app/"
+      - "./:/app/"
     command:
       - run
       - -vv
       - --enable-api
       - --cors
-      - '*'
+      - "*"
   action-service-pinger:
     image: pinger_requirements:latest
-    networks: ['rasa-project2']
+    networks: ["rasa-project2"]
     ports:
-    - "5055:5055"
+      - "5055:5055"
     volumes:
-    - "./actions:/app/actions"
-networks: {rasa-project2: {}}
+      - "./actions:/app/actions"
+networks: { rasa-project2: {} }

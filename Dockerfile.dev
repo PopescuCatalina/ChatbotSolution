@@ -1,0 +1,7 @@
+FROM rasa/rasa:3.5.5-full
+
+WORKDIR '/app'
+COPY . /app
+VOLUME /app
+
+CMD [ "run","-vv","--enable-api","--cors","*","--debug" ]
