@@ -1,4 +1,4 @@
-# Pinger Smart Autoreply Bot
+#  Smart Autoreply Bot
  This repository contains the main skeleton of the Smart Autoreply AI bot.
 ## Setup
  Make sure to clone the project and install docker images and containers from docker-compose.yml
