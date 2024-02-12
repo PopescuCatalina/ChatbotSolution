@@ -1,3 +1,11 @@
+
+
+
+
+
+https://github.com/PopescuCatalina/ChatbotSolution/assets/43966104/a098a993-71ab-440c-bf16-8840ccdc33bb
+
+
 #  Smart Autoreply Bot
  This repository contains the main skeleton of the Smart Autoreply AI bot.
 ## Setup
